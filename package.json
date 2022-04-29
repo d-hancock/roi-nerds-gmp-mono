@@ -1,0 +1,11 @@
+{
+  "name": "roi-nerds-gmp-mono",
+  "packageManager": "yarn@3.2.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "lerna": "^4.0.0"
+  }
+}
