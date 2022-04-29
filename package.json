@@ -2,10 +2,13 @@
   "name": "roi-nerds-gmp-mono",
   "packageManager": "yarn@3.2.0",
   "private": true,
+  "scripts": {
+    "develop:RNsite": "yarn workspace @roi/roi-nerds-website develop"
+  },
   "workspaces": [
-    "packages/*"
-  ],
-  "dependencies": {
-    "lerna": "^4.0.0"
-  }
+    "packages/component-libraries/*",
+    "packages/sites/*",
+    "packages/starters/*",
+    "packages/themes/*"
+  ]
 }
