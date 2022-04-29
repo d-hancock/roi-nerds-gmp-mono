@@ -3,7 +3,7 @@
   "packageManager": "yarn@3.2.0",
   "private": true,
   "scripts": {
-    "develop:RNsite": "yarn workspace @roi/roi-nerds-website develop"
+    "develop:ts-starter": "yarn workspace minimal develop"
   },
   "workspaces": [
     "packages/component-libraries/*",
