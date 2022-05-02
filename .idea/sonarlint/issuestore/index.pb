@@ -1,8 +1,6 @@
 
 ^
 .packages/sites/roi-nerds-site/gatsby-config.ts,0/a/0a7e2d61403ea40761fb14e3bb48320e10afb17d
-;
-.prettierrc,2/0/20137a9e94744624390b6748bc96df5ca1579b71
 Y
 )packages/sites/bare-bones-type/.gitignore,d/c/dc636d68b00a2cb1dea6623f6049dbdaeff160be
 Y
@@ -35,11 +33,9 @@ f
 6packages/sites/bare-bones-type-two/src/pages/index.tsx,d/9/d92208bcef9752d929934deef9dd0a2d726f8c91
 d
 4packages/sites/bare-bones-type-two/src/pages/404.tsx,5/c/5cf426bee24af2bc2624e2b375cf022602311179
-?
-.pnp.loader.mjs,7/a/7ad03ee4dee8d76a46a648e5949c805b5452d4bf
 [
 +packages/sites/full-ts-starter/package.json,b/8/b89b050ccfd210561d1506d9fcc69c585e398e2c
-9
-	.eslintrc,4/b/4be5f5e3cea171c304090be92469b2f2cb51039a
 _
 /packages/sites/bare-bones-type/gatsby-config.ts,4/7/47b33609cb0d8b2f1ca0b5f9a30dedcb08f09121
+=
+.editorconfig,6/2/626a747c8694eaae66f2afb3d1a745b045782c70
