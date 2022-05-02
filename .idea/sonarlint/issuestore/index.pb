@@ -37,5 +37,3 @@ d
 +packages/sites/full-ts-starter/package.json,b/8/b89b050ccfd210561d1506d9fcc69c585e398e2c
 _
 /packages/sites/bare-bones-type/gatsby-config.ts,4/7/47b33609cb0d8b2f1ca0b5f9a30dedcb08f09121
-=
-.editorconfig,6/2/626a747c8694eaae66f2afb3d1a745b045782c70
