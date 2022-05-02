@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../gatsby-advanced-starter/themes/advanced/.idea/advanced.iml" filepath="$PROJECT_DIR$/../gatsby-advanced-starter/themes/advanced/.idea/advanced.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/roi-nerds-gmp-mono.iml" filepath="$PROJECT_DIR$/.idea/roi-nerds-gmp-mono.iml" />
     </modules>
   </component>
