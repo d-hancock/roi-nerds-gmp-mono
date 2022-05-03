@@ -7,6 +7,8 @@
     "preinstall": "typesync || :",
     "dev:roi-core": "yarn workspace @roi/gatsby-starter-roi-core develop",
     "clean:roi-core": "yarn workspace @roi/gatsby-starter-roi-core clean",
+    "dev:roi-site": "yarn workspace @roi/roi-nerds-website develop",
+    "clean:roi-site": "yarn workspace @roi/roi-nerds-website clean",
     "dev:comp-lib": "yarn workspace @roi/roi-comp-lib develop",
     "storybook:comp-lib": "yarn workspace @roi/roi-comp-lib storybook",
     "clean:comp-lib": "yarn workspace @roi/roi-comp-lib clean"
@@ -23,8 +25,22 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@mdx-js/react": "^1.6.22",
+    "@storybook/addon-actions": "^6.4.22",
+    "@storybook/addon-docs": "^6.4.22",
+    "@storybook/addon-essentials": "^6.4.22",
+    "@storybook/addon-interactions": "^6.4.22",
+    "@storybook/addon-links": "^6.4.22",
+    "@storybook/builder-webpack5": "^6.4.22",
+    "@storybook/manager-webpack5": "^6.4.22",
+    "@storybook/react": "^6.4.22",
+    "@storybook/testing-library": "^0.0.11",
+    "@types/babel__core": "^7",
+    "@types/mdx-js__react": "^1.5.5",
     "@types/react": "^17.0.44",
     "@types/react-dom": "^17.0.16",
+    "babel-loader": "^8.2.5",
     "typescript": "^4.6.3",
     "typesync": "^0.9.1"
   }
