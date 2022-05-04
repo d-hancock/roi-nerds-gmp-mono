@@ -7,3 +7,4 @@
 !.yarn/versions
 node_modules/
 .idea
+packages/component-libraries/temp-block-lib/.cache
