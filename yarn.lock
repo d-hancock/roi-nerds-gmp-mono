@@ -13764,6 +13764,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-theme-roi-blocks@workspace:packages/themes/gatsby-theme-roi-blocks":
+  version: 0.0.0-use.local
+  resolution: "gatsby-theme-roi-blocks@workspace:packages/themes/gatsby-theme-roi-blocks"
+  dependencies:
+    gatsby: ^4.13.1
+    react: ^17.0.1
+    react-dom: ^17.0.1
+  languageName: unknown
+  linkType: soft
+
 "gatsby-transformer-sharp@npm:^4.13.0":
   version: 4.13.0
   resolution: "gatsby-transformer-sharp@npm:4.13.0"
