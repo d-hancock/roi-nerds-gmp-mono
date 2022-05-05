@@ -14,3 +14,12 @@ I've got the quick and dirty copy and paste site set up. Instead of actually jus
 - Core theme is the giant bundle of dependancies and the data and typings stuff for the sections that like every site will have. 
 - blocks theme is to encapsalte the temporary inclusion stuff from the front. 
 - the core-mui theme will probably implement the basic themeing stuff and potentially the deps from including a particular styling framework. 
+
+## Core Theme
+Mostly just going to load all the work onto this package for the time being. I will split stuff off as it makes sense though. 
+- Includes a local directory for building plugins that will be used in the core theme, at least to begin with. 
+- For now all the different data related features will be handled as a plugin.
+
+## Component Libraries.
+### TODOs
+- Need to get all packages here using the same versions of the core technologies if possible. That should make it much easier to manage things going forward. 

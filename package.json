@@ -3,7 +3,8 @@
   "packageManager": "yarn@3.2.0",
   "private": true,
   "scripts": {
-    "typesync:roi-core": "yarn workspaces foreach run preinstall",
+    "typesync:all": "yarn workspaces foreach run preinstall",
+    "clean:all": "yarn workspaces foreach run clean",
     "preinstall": "typesync || :",
     "dev:roi-core": "yarn workspace @roi/gatsby-starter-roi-core develop",
     "clean:roi-core": "yarn workspace @roi/gatsby-starter-roi-core clean",
@@ -17,7 +18,8 @@
     "packages/component-libraries/*",
     "packages/sites/*",
     "packages/starters/*",
-    "packages/themes/*"
+    "packages/themes/*",
+    "packages/plugins/*"
   ],
   "dependencies": {
     "gatsby": "^4.13.1",
