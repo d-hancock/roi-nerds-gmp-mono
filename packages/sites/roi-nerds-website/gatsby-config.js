@@ -8,6 +8,11 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
+    "gatsby-plugin-top-layout",
+    // If you want to use styled components you should add the plugin here.
+    // 'gatsby-plugin-styled-components',
+    "gatsby-plugin-mui-emotion",
+    "gatsby-plugin-resolve-src",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
