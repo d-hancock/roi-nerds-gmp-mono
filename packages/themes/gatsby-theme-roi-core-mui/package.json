@@ -4,6 +4,7 @@
   "private": true,
   "description": "gatsby-theme-roi-core",
   "author": "d-hancock",
+  "main": "gatsby-config.js",
   "keywords": [
     "gatsby"
   ],
