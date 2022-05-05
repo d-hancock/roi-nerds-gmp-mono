@@ -11,7 +11,10 @@ module.exports = {
     "gatsby-plugin-top-layout",
     // If you want to use styled components you should add the plugin here.
     // 'gatsby-plugin-styled-components',
-    "gatsby-plugin-mui-emotion",
+    // "gatsby-plugin-mui-emotion",
+    {
+      resolve: require.resolve("../../plugins/gatsby-plugin-mui-emotion"),
+    },
     "gatsby-plugin-resolve-src",
     {
       resolve: "gatsby-plugin-manifest",

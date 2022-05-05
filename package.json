@@ -18,8 +18,7 @@
     "packages/component-libraries/*",
     "packages/sites/*",
     "packages/starters/*",
-    "packages/themes/*",
-    "packages/plugins/*"
+    "packages/themes/*"
   ],
   "dependencies": {
     "gatsby": "^4.13.1",

@@ -3874,6 +3874,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@roi/gatsby-plugin-mui-emotion@workspace:packages/plugins/gatsby-plugin-mui-emotion":
+  version: 0.0.0-use.local
+  resolution: "@roi/gatsby-plugin-mui-emotion@workspace:packages/plugins/gatsby-plugin-mui-emotion"
+  languageName: unknown
+  linkType: soft
+
 "@roi/gatsby-starter-roi-core@workspace:packages/starters/gatsby-starter-roi-core":
   version: 0.0.0-use.local
   resolution: "@roi/gatsby-starter-roi-core@workspace:packages/starters/gatsby-starter-roi-core"
