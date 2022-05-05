@@ -3,3 +3,8 @@
 - Splitting time with the dumb mockup implementation that will be refactored to incorporate the use of the refactored theme.
 - After a dumb version is up it will just be incremetally turned into the core of the platform
 - Dev work will start in js and will be refactored into typescript as part of the maturation process instead of initial development. 
+
+
+## Roi Nerds Site
+
+I've got the quick and dirty copy and paste site set up. Instead of actually just manually typing in info I will spend some time on how I'd actually like to work with the data for this. I'm really not likely to win much in the way of business until I've got a few things on the portfolio. 
