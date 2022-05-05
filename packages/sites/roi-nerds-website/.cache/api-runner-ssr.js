@@ -11,6 +11,14 @@ var plugins = [{
       plugin: require('/home/dale/Development/roi-nerds-gmp-mono/node_modules/gatsby-plugin-sitemap/gatsby-ssr.js'),
       options: {"plugins":[],"output":"/sitemap","createLinkInHead":true,"entryLimit":45000,"query":"{ site { siteMetadata { siteUrl } } allSitePage { nodes { path } } }","excludes":[]},
     },{
+      name: 'gatsby-plugin-top-layout',
+      plugin: require('/home/dale/Development/roi-nerds-gmp-mono/packages/sites/roi-nerds-website/plugins/gatsby-plugin-top-layout/gatsby-ssr.js'),
+      options: {"plugins":[]},
+    },{
+      name: 'gatsby-plugin-mui-emotion',
+      plugin: require('/home/dale/Development/roi-nerds-gmp-mono/packages/sites/roi-nerds-website/plugins/gatsby-plugin-mui-emotion/gatsby-ssr.js'),
+      options: {"plugins":[]},
+    },{
       name: 'gatsby-plugin-manifest',
       plugin: require('/home/dale/Development/roi-nerds-gmp-mono/node_modules/gatsby-plugin-manifest/gatsby-ssr.js'),
       options: {"plugins":[],"icon":"src/images/icon.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"53aa06cf17e4239d0dba6ffd09854e02"},
