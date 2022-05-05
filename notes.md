@@ -8,3 +8,9 @@
 ## Roi Nerds Site
 
 I've got the quick and dirty copy and paste site set up. Instead of actually just manually typing in info I will spend some time on how I'd actually like to work with the data for this. I'm really not likely to win much in the way of business until I've got a few things on the portfolio. 
+
+- I'll begin experimenting from here with how dependencies can be handled withing the themes and how cumbersome working with more than one to start will be.
+- I think I'll actually just begin with the core theme and then split off from there. 
+- Core theme is the giant bundle of dependancies and the data and typings stuff for the sections that like every site will have. 
+- blocks theme is to encapsalte the temporary inclusion stuff from the front. 
+- the core-mui theme will probably implement the basic themeing stuff and potentially the deps from including a particular styling framework. 
