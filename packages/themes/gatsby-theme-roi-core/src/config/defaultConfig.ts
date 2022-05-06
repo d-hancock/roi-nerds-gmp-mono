@@ -19,6 +19,22 @@ const config: SiteConfig = {
     backgroundColor: "#F7F7F7", // Used for setting manifest background color.
   },
 
+  // Navigation configuration.
+  navData: {
+    items: [
+      {
+        id: "homepage",
+        name: "home",
+        link: "/",
+      },
+      {
+        id: "aboutpage",
+        name: "about",
+        link: "/about",
+      },
+    ],
+  },
+
   // User configuration
   user: undefined,
 

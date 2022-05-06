@@ -28,8 +28,10 @@ export const schema = `#graphql
     }
   }
 
+  union NavMenuItemOrNavItem = NavMenuItem | NavItem
+
   type NavData {
-    items: [NavMenuItem | NavItem]
+    items: [NavMenuItemOrNavItem]
   }
 
   type WebsiteData {

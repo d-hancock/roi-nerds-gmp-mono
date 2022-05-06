@@ -14,7 +14,7 @@ type NavItem = {
   icon?: string
 }
 
- interface NavMenuItem {
+interface NavMenuItem {
   id: string
   layout: string
   menuType: string
@@ -28,7 +28,7 @@ type NavItem = {
 }
 
 export interface NavData {
-  items: [NavMenuItem | NavItem]
+  items: Array<NavMenuItem | NavItem>
 }
 
 export interface WebsiteData {
