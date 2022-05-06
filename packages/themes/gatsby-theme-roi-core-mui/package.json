@@ -1,8 +1,8 @@
 {
-  "name": "@roi/gatsby-theme-roi-core-mui",
+  "name": "@roi/gatsby-theme-roi-mui",
   "version": "1.0.0",
   "private": true,
-  "description": "gatsby-theme-roi-core",
+  "description": "gatsby-theme-roi-mui",
   "author": "d-hancock",
   "main": "gatsby-config.js",
   "keywords": [

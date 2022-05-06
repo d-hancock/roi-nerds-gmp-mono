@@ -2,9 +2,9 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins:      [
-    "gatsby-plugin-top-layout",
-    "",
+  plugins: [
+    // "gatsby-plugin-top-layout",
+    // "gatsby-plugin-mui-emotion",
     "gatsby-plugin-emotion",
     "gatsby-plugin-image",
     // "gatsby-plugin-manifest",

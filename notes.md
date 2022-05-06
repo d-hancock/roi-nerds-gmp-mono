@@ -19,6 +19,8 @@ I've got the quick and dirty copy and paste site set up. Instead of actually jus
 Mostly just going to load all the work onto this package for the time being. I will split stuff off as it makes sense though. 
 - Includes a local directory for building plugins that will be used in the core theme, at least to begin with. 
 - For now all the different data related features will be handled as a plugin.
+- Have to handle MUI concerns like FOUC and the like. Check out this implementation.
+https://github.com/hupe1980/gatsby-theme-material-ui/tree/master/packages/gatsby-theme-material-ui
 
 ## Component Libraries.
 ### TODOs
