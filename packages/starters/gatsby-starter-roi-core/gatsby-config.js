@@ -4,7 +4,7 @@ module.exports = {
   },
   plugins:      [
     {
-      resolve: "@roi/gatsby-theme-roi-core-mui",
+      resolve: "@roi/gatsby-theme-roi-core",
       options: {},
     },
   ],
