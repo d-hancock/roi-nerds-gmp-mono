@@ -22,6 +22,8 @@ Mostly just going to load all the work onto this package for the time being. I w
 - Have to handle MUI concerns like FOUC and the like. Check out this implementation.
 https://github.com/hupe1980/gatsby-theme-material-ui/tree/master/packages/gatsby-theme-material-ui
 
+- Need to refactor the config directory to actually be useful. 
+
 ## Component Libraries.
 ### TODOs
 - Need to get all packages here using the same versions of the core technologies if possible. That should make it much easier to manage things going forward. 

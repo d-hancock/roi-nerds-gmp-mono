@@ -1,3 +1,4 @@
+// TODO need to set this file up correctly. 
 // import { useStaticQuery, graphql } from "gatsby";
 // import { SiteConfig } from "./types";
 
