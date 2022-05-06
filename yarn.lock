@@ -14214,6 +14214,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-starter-plugin@workspace:packages/plugins/gatsby-plugin":
+  version: 0.0.0-use.local
+  resolution: "gatsby-starter-plugin@workspace:packages/plugins/gatsby-plugin"
+  languageName: unknown
+  linkType: soft
+
 "gatsby-telemetry@npm:^3.13.0":
   version: 3.13.0
   resolution: "gatsby-telemetry@npm:3.13.0"
