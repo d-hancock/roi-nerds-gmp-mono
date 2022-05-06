@@ -34,7 +34,7 @@
     "gatsby-plugin-sitemap": "^5.13.0",
     "gatsby-source-filesystem": "^4.13.0",
     "gatsby-transformer-sharp": "^4.13.0",
-    "is-absolute-url": "^4.0.1",
+    "is-absolute-url": "^3.0.3",
     "react-helmet": "^6.1.0",
     "url-join": "^4.0.1"
   },
