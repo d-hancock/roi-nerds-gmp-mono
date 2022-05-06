@@ -3,6 +3,8 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins:      [
+    "gatsby-plugin-top-layout",
+    "",
     "gatsby-plugin-emotion",
     "gatsby-plugin-image",
     // "gatsby-plugin-manifest",
