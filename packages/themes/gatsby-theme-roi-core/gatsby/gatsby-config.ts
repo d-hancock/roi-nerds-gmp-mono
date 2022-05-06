@@ -1,3 +1,6 @@
+// This is the gatsby-config file which is handled with typescript. It is in a seperate dir
+// because gatsby still doesn't behave consistently enough using ts files for the gatsby bits
+// in the standard config.
 import urljoin from "url-join"
 import { GatsbyConfig } from "gatsby"
 

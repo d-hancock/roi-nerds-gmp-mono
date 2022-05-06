@@ -1,0 +1,1 @@
+// This is the gatsby-node file which is handled with typescript. 
