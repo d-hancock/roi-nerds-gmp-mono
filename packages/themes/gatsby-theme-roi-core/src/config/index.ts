@@ -1,3 +1,5 @@
+// This file serves as the api and main access point for working with the config directory. 
+
 import urlJoin from "url-join";
 import { merge } from "lodash";
 

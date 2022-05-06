@@ -1,4 +1,6 @@
-import { SiteConfig } from "./types";
+// This file defines the theme's default configuration options.
+
+import { SiteConfig } from "./types"
 
 const config: SiteConfig = {
   // Website configuration
@@ -37,6 +39,6 @@ const config: SiteConfig = {
   iconCachePaths: undefined, // Glob pattern path for the icons to be cached by the gatsby-plugin-offline
 
   basePath: undefined, // Base path for mounting pages. Allows for multiple themes to be used in a single website.
-};
+}
 
-export default config;
+export default config

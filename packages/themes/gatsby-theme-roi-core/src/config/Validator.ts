@@ -1,3 +1,5 @@
+// This file defines a function for validating the site config object.
+
 import isAbsoluteUrl from "is-absolute-url"
 import { SiteConfig } from "./types"
 

@@ -1,3 +1,5 @@
+// This file defines the graphql schema relevent to the config directory.
+
 export const schema = `#graphql
   type WebsiteData {
     title: String!

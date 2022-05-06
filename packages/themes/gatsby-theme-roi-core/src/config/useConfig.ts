@@ -1,3 +1,5 @@
+// This file contains the set up for interfacing with the config object queried from graphql
+
 // TODO need to set this file up correctly. 
 // import { useStaticQuery, graphql } from "gatsby";
 // import { SiteConfig } from "./types";

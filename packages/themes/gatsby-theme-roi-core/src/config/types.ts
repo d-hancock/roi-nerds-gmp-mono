@@ -1,3 +1,5 @@
+// This file defines the typescript types used in the config directory. 
+
 export interface WebsiteData {
   title: string;
   titleShort: string;
