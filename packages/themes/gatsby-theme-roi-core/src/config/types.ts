@@ -1,26 +1,26 @@
 // This file defines the typescript types used in the config directory.
 
-export interface NavCtaItem {
+type NavCtaItem = {
   id: string
   name: string
   link: string
   icon?: string
 }
 
-export interface NavItem {
+type NavItem = {
   id: string
   name: string
   link: string
   icon?: string
 }
 
-export interface NavMenu {
+ interface NavMenuItem {
   id: string
   layout: string
   menuType: string
   name: string
   defaultLink?: string
-  navItems: NavItem | NavItem[]
+  navItems: NavItem[]
   cta?: {
     primary?: NavCtaItem
     secondary?: NavCtaItem
@@ -28,7 +28,7 @@ export interface NavMenu {
 }
 
 export interface NavData {
-  items: [NavMenu | NavItem]
+  items: [NavMenuItem | NavItem]
 }
 
 export interface WebsiteData {

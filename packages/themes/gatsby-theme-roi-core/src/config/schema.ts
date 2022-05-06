@@ -1,6 +1,37 @@
 // This file defines the graphql schema relevent to the config directory.
 
 export const schema = `#graphql
+
+  type NavCtaItem {
+    id: String!
+    name: String!
+    link: String
+  }
+
+  type NavItem {
+    id: String!
+    name: String!
+    link: String!
+    icon: String
+  }
+
+  type NavMenuItem {
+    id: String!
+    layout: String!
+    menuType: String!
+    name: String!
+    defaultLink: String
+    navItems: [NavItem]!
+    cta: {
+      primary: NavCtaItem
+      secondary: NavCtaItem
+    }
+  }
+
+  type NavData {
+    items: [NavMenuItem | NavItem]
+  }
+
   type WebsiteData {
     title: String!
     titleShort: String!
@@ -50,6 +81,7 @@ export const schema = `#graphql
 
   type  SiteConfig {
     website: WebsiteData!
+    navData: NavData
     user: UserData
     organization: OrganizationData
 
@@ -71,6 +103,6 @@ export const schema = `#graphql
   type SiteSiteMetadata {
     config: SiteConfig!
   }
-`;
+`
 
-export default schema;
+export default schema
