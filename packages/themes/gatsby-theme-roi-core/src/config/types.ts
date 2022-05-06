@@ -1,67 +1,99 @@
-// This file defines the typescript types used in the config directory. 
+// This file defines the typescript types used in the config directory.
+
+export interface NavCtaItem {
+  id: string
+  name: string
+  link: string
+  icon?: string
+}
+
+export interface NavItem {
+  id: string
+  name: string
+  link: string
+  icon?: string
+}
+
+export interface NavMenu {
+  id: string
+  layout: string
+  menuType: string
+  name: string
+  defaultLink?: string
+  navItems: NavItem | NavItem[]
+  cta?: {
+    primary?: NavCtaItem
+    secondary?: NavCtaItem
+  }
+}
+
+export interface NavData {
+  items: [NavMenu | NavItem]
+}
 
 export interface WebsiteData {
-  title: string;
-  titleShort: string;
-  name: string;
-  description: string;
-  language: string;
-  logoUrl: string;
-  fbAppId?: string;
-  twitterName?: string;
-  url: string;
-  copyright: string;
-  rss: string;
-  rssTitle: string;
-  googleAnalyticsId?: string;
-  disqusShortname?: string;
-  themeColor: string;
-  backgroundColor: string;
+  title: string
+  titleShort: string
+  name: string
+  description: string
+  language: string
+  logoUrl: string
+  fbAppId?: string
+  twitterName?: string
+  url: string
+  copyright: string
+  rss?: string
+  rssTitle?: string
+  googleAnalyticsId?: string
+  disqusShortname?: string
+  themeColor?: string
+  backgroundColor?: string
 }
 
 export interface UserData {
-  id: string;
-  firstName: string;
-  lastName: string;
-  twitterName?: string;
-  linkedIn?: string;
-  github?: string;
-  email: string;
-  location: string;
-  about: string;
-  avatar: string;
+  id: string
+  firstName: string
+  lastName: string
+  twitterName?: string
+  linkedIn?: string
+  github?: string
+  email: string
+  location: string
+  about: string
+  avatar: string
 }
 
 export interface OrganizationData {
-  name: string;
-  description: string;
-  logoUrl: string;
-  url: string;
+  name: string
+  description: string
+  logoUrl: string
+  url: string
 }
 
 type IconManifest = {
-  src: string;
-  sizes: string;
-  type: string;
-  purpose?: string;
-};
+  src: string
+  sizes: string
+  type: string
+  purpose?: string
+}
 
 export interface SiteConfig {
-  website: WebsiteData;
-  user?: UserData;
-  organization?: OrganizationData;
+  website: WebsiteData
+  navData?: NavData
+  user?: UserData
+  organization?: OrganizationData
 
-  pathPrefix: string;
+  pathPrefix: string
 
-  contentDir?: string;
-  assetDir?: string;
+  contentDir?: string
+  assetDir?: string
 
-  embeddedImageWidth: number;
-  embeddedVideoWidth: number;
+  embeddedImageWidth: number
+  embeddedVideoWidth: number
 
-  iconPath?: string;
-  iconList: Readonly<Array<IconManifest>>;
-  iconCachePaths?: string[];
+  iconPath?: string
+  iconList: Readonly<Array<IconManifest>>
+  iconCachePaths?: string[]
 
-  basePath?: string;
+  basePath?: string
 }
