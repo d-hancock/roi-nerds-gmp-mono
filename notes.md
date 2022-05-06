@@ -23,7 +23,16 @@ Mostly just going to load all the work onto this package for the time being. I w
 https://github.com/hupe1980/gatsby-theme-material-ui/tree/master/packages/gatsby-theme-material-ui
 
 - Need to refactor the config directory to actually be useful. 
-
+- Layout what data I need for this first pass MVP site
+- shit like
+    - Links
+        - nav
+        - footer
+        - mobile
+    - Services
+    - Process
+    - Packages
+    - Posts
 ## Component Libraries.
 ### TODOs
 - Need to get all packages here using the same versions of the core technologies if possible. That should make it much easier to manage things going forward. 
