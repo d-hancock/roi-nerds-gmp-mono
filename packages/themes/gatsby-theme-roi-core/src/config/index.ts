@@ -21,4 +21,4 @@ export const withDefaults = (userConfig: SiteConfig): Readonly<SiteConfig> =>
 export const withBasePath = (config: SiteConfig, url: string): string =>
   config.basePath ? urlJoin(config.basePath, url) : url;
 
-export { default as useConfig } from "./useConfig";
+// export { default as useConfig } from "./useConfig";
