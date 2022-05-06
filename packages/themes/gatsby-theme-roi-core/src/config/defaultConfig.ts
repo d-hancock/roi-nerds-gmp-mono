@@ -21,7 +21,7 @@ const config: SiteConfig = {
 
   // Navigation configuration.
   navData: {
-    items: [
+    navLinks: [
       {
         id: "homepage",
         name: "home",
@@ -49,6 +49,18 @@ const config: SiteConfig = {
             link: "/",
           },
         ],
+      },
+    ],
+    footerLinks: [
+      {
+        id: "foot-1",
+        name: "name 1",
+        link: "/",
+      },
+      {
+        id: "foot-2",
+        name: "name 2",
+        link: "/",
       },
     ],
   },

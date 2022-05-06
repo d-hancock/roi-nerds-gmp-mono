@@ -28,7 +28,8 @@ interface NavMenuItem {
 }
 
 export interface NavData {
-  items: Array<NavMenuItem | NavItem>
+  navLinks: Array<NavMenuItem | NavItem>
+  footerLinks: Array<NavMenuItem | NavItem>
 }
 
 export interface WebsiteData {

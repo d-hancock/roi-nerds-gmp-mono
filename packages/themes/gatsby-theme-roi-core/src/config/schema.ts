@@ -31,7 +31,8 @@ export const schema = `#graphql
   union NavMenuItemOrNavItem = NavMenuItem | NavItem
 
   type NavData {
-    items: [NavMenuItemOrNavItem]
+    navLinks: [NavMenuItemOrNavItem]
+    footerLinks: [NavMenuItemOrNavItem]
   }
 
   type WebsiteData {
