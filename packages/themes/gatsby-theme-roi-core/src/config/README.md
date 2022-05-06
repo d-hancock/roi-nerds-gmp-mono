@@ -1,0 +1,1 @@
+Everything related to the configuration object used internally by the theme and the options that can be passed to it. 

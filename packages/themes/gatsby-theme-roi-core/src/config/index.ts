@@ -13,7 +13,6 @@ export type {
 } from "./types";
 
 export { default as schema } from "./schema";
-export { default as constants } from "./constants";
 
 export const withDefaults = (userConfig: SiteConfig): Readonly<SiteConfig> =>
   validateSiteConfig(merge(baseConfig, userConfig));
