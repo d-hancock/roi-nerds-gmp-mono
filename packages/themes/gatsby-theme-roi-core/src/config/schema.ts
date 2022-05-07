@@ -1,4 +1,6 @@
 // This file defines the graphql schema relevent to the config directory.
+// Need to refactor this to implement interface inheritance
+// https://www.gatsbyjs.com/docs/reference/graphql-data-layer/schema-customization/#queryable-interfaces
 
 export const schema = `#graphql
 
@@ -6,6 +8,11 @@ export const schema = `#graphql
     id: String!
     name: String!
     link: String
+  }
+
+  type NavCTA {
+    primary: NavCtaItem
+    secondary: NavCtaItem
   }
 
   type NavItem {
@@ -22,10 +29,7 @@ export const schema = `#graphql
     name: String!
     defaultLink: String
     navItems: [NavItem]!
-    cta: {
-      primary: NavCtaItem
-      secondary: NavCtaItem
-    }
+    cta: NavCTA
   }
 
   union NavMenuItemOrNavItem = NavMenuItem | NavItem
