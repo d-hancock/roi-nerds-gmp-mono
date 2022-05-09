@@ -1,7 +1,8 @@
+// @ts-ignore
 import React from "react"
-import Test from "@roi/roi-comp-lib/src/components"
+import { Test } from "@roi/roi-comp-lib"
 
-export const CompLibTestPage = () => {
+const CompLibTestPage = () => {
   return <Test />
 }
 
