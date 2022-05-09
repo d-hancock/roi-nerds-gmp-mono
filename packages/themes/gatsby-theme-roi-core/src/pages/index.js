@@ -1,4 +1,4 @@
-import * as React from "react"
+// import * as React from "react"
 
 // styles
 const pageStyles = {
@@ -62,21 +62,21 @@ const docLink = {
   color: "#8954A8",
 }
 
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
+// const badgeStyle = {
+//   color: "#fff",
+//   backgroundColor: "#088413",
+//   border: "1px solid #088413",
+//   fontSize: 11,
+//   fontWeight: "bold",
+//   letterSpacing: 1,
+//   borderRadius: 4,
+//   padding: "4px 6px",
+//   display: "inline-block",
+//   position: "relative",
+//   top: -2,
+//   marginLeft: 10,
+//   lineHeight: 1,
+// }
 
 // data
 const links = [
@@ -163,11 +163,11 @@ const IndexPage = () => {
               >
                 {link.text}
               </a>
-              {link.badge && (
+              {/* {link.badge && (
                 <span style={badgeStyle} aria-label="New Badge">
                   NEW!
                 </span>
-              )}
+              )} */}
               <p style={descriptionStyle}>{link.description}</p>
             </span>
           </li>

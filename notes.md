@@ -36,3 +36,5 @@ https://github.com/hupe1980/gatsby-theme-material-ui/tree/master/packages/gatsby
 ## Component Libraries.
 ### TODOs
 - Need to get all packages here using the same versions of the core technologies if possible. That should make it much easier to manage things going forward. 
+
+# Monorepo Configuration

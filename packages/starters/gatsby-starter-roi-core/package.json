@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@roi/gatsby-theme-roi-core": "*",
+    "@roi/roi-comp-lib": "*",
     "gatsby": "^4.13.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
