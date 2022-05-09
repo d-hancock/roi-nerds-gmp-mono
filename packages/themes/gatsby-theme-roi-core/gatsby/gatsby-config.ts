@@ -1,6 +1,7 @@
 // This is the gatsby-config file which is handled with typescript. It is in a seperate dir
 // because gatsby still doesn't behave consistently enough using ts files for the gatsby bits
 // in the standard config.
+import path from "path"
 import urljoin from "url-join"
 import { GatsbyConfig } from "gatsby"
 
@@ -21,28 +22,57 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
     },
     plugins: [
       "gatsby-plugin-emotion",
-      //   {
-      //     resolve: "gatsby-plugin-compile-es6-packages",
-      //     options: {
-      //       modules: ["gatsby-plugin-image"],
-      //     },
-      //   },
+      {
+        resolve: "gatsby-plugin-compile-es6-packages",
+        options: {
+          modules: ["gatsby-plugin-image"],
+        },
+      },
       "gatsby-plugin-react-helmet",
-      //   "gatsby-plugin-lodash",
-      //   {
-      //     resolve: "gatsby-source-filesystem",
-      //     options: {
-      //       name: "assets",
-      //       path: config.assetDir || path.join(__dirname, "../static"),
-      //     },
+      "gatsby-plugin-lodash",
+      // {
+      //   resolve: "gatsby-source-filesystem",
+      //   options: {
+      //     name: "offerings",
+      //     path: path.join(__dirname, "../content-data/offerings"),
       //   },
-      //   {
-      //     resolve: "gatsby-source-filesystem",
-      //     options: {
-      //       name: "posts",
-      //       path: config.contentDir || path.join(__dirname, "../content"),
-      //     },
+      // },
+      // {
+      //   resolve: "gatsby-source-filesystem",
+      //   options: {
+      //     name: "case-studies",
+      //     path: path.join(__dirname, "../content-data/case-studies"),
       //   },
+      // },
+      // {
+      //   resolve: "gatsby-source-filesystem",
+      //   options: {
+      //     name: "testamonials",
+      //     path: path.join(__dirname, "../content-data/testamonials"),
+      //   },
+      // },
+      // {
+      //   resolve: "gatsby-source-filesystem",
+      //   options: {
+      //     name: "portfolio",
+      //     path: path.join(__dirname, "../content-data/portfolio"),
+      //   },
+      // },
+      //
+      // {
+      //   resolve: "gatsby-source-filesystem",
+      //   options: {
+      //     name: "assets",
+      //     path: config.assetDir || path.join(__dirname, "../static"),
+      //   },
+      // },
+      // {
+      //   resolve: "gatsby-source-filesystem",
+      //   options: {
+      //     name: "posts",
+      //     path: config.contentDir || path.join(__dirname, "../content"),
+      //   },
+      // },
       {
         resolve: "gatsby-plugin-sharp",
         options: {
@@ -57,9 +87,6 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
       "gatsby-transformer-sharp",
       "gatsby-plugin-image",
       "gatsby-plugin-mdx",
-      //   "gatsby-remark-images",
-      //   "gatsby-plugin-catch-links",
-      //   "gatsby-plugin-twitter",
       "gatsby-plugin-sitemap",
       {
         resolve: "gatsby-plugin-manifest",

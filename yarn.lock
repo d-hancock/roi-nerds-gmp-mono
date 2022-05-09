@@ -4171,8 +4171,10 @@ __metadata:
     "@types/react-dom": ^17.0.15
     "@types/react-helmet": ^6.1.5
     "@types/url-join": ^4.0.1
+    gatsby-plugin-compile-es6-packages: ^2.1.1
     gatsby-plugin-emotion: ^7.13.0
     gatsby-plugin-image: ^2.13.0
+    gatsby-plugin-lodash: ^5.13.0
     gatsby-plugin-manifest: ^4.13.0
     gatsby-plugin-mdx: ^3.13.0
     gatsby-plugin-offline: ^5.0.0
@@ -13902,6 +13904,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-plugin-compile-es6-packages@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "gatsby-plugin-compile-es6-packages@npm:2.1.1"
+  dependencies:
+    "@babel/runtime": ^7.0.0
+    regex-escape: ^3.4.8
+  peerDependencies:
+    gatsby: ">2.0.0-alpha"
+  checksum: 1d7fdb58bc90b4fa86786acee2e93709aed5c6b6ee506f11245b855c7926515bc88a7a85c6b888fb7fa529150a5b46012bbfa8b92388be6c4dae7d3008d52a3b
+  languageName: node
+  linkType: hard
+
 "gatsby-plugin-emotion@npm:^7.13.0":
   version: 7.13.0
   resolution: "gatsby-plugin-emotion@npm:7.13.0"
@@ -13941,6 +13955,19 @@ __metadata:
     react: ^16.9.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.9.0 || ^17.0.0 || ^18.0.0
   checksum: 1fba1449f8d6c3c079dbdcde85bb47b7d7ac5ba78bb8c031013dce53cb723e217356c548e83fad79d3f7196c1e80b691f6cbaf8457321d9298faaa97c130890e
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-lodash@npm:^5.13.0":
+  version: 5.13.0
+  resolution: "gatsby-plugin-lodash@npm:5.13.0"
+  dependencies:
+    "@babel/runtime": ^7.15.4
+    babel-plugin-lodash: ^3.3.4
+    lodash-webpack-plugin: ^0.11.6
+  peerDependencies:
+    gatsby: ^4.0.0-next
+  checksum: 6b3699c276310fa8aa38896dcb322e3f1dfe9e19551711398e72160aaa13b81cac2ddc11de18f69427bcdd4bea6319cf83beb90f3ff09dcd7bff8585860a53c4
   languageName: node
   linkType: hard
 
@@ -17455,6 +17482,17 @@ __metadata:
   version: 4.17.21
   resolution: "lodash-es@npm:4.17.21"
   checksum: 05cbffad6e2adbb331a4e16fbd826e7faee403a1a04873b82b42c0f22090f280839f85b95393f487c1303c8a3d2a010048bf06151a6cbe03eee4d388fb0a12d2
+  languageName: node
+  linkType: hard
+
+"lodash-webpack-plugin@npm:^0.11.6":
+  version: 0.11.6
+  resolution: "lodash-webpack-plugin@npm:0.11.6"
+  dependencies:
+    lodash: ^4.17.20
+  peerDependencies:
+    webpack: ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.1.0
+  checksum: 0ee7ca709592059bc8a83720d7f458efb643a0a538f408efc54a86d72282b325646774d4da90f9e5559b3909a978656077e42fae83697f50e6f9f35fd513a8f5
   languageName: node
   linkType: hard
 
@@ -21935,6 +21973,13 @@ __metadata:
   dependencies:
     "@babel/runtime": ^7.8.4
   checksum: 86e54849ab1167618d28bb56d214c52a983daf29b0d115c976d79840511420049b6b42c9ebdf187defa8e7129bdd74b6dd266420d0d3868c9fa7f793b5d15d49
+  languageName: node
+  linkType: hard
+
+"regex-escape@npm:^3.4.8":
+  version: 3.4.10
+  resolution: "regex-escape@npm:3.4.10"
+  checksum: 95fe8438cd6f9f0b40fbb78feadd49a6d2ab4c5f087f50f5f62ba76a40fe0619780bfbdda2301c88b1efc8550724c16f52b2ee2fc139689a4e42816dd5946f3e
   languageName: node
   linkType: hard
 
