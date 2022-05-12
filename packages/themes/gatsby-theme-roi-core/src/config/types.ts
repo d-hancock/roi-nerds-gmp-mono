@@ -7,7 +7,6 @@ type NavCtaItem = {
   icon?: string
 }
 
-
 type NavItem = {
   id: string
   name: string

@@ -4,8 +4,9 @@ import {
   Toolbar,
   Typography,
   useScrollTrigger,
-  Slide,
+  Slide, IconButton,
 } from "@mui/material"
+import HomeIcon from '@mui/icons-material/Home';
 
 function HideOnScroll(props) {
   const { children, window } = props
@@ -44,7 +45,7 @@ function ElevationScroll(props) {
 }
 
 function ScrollBehavior(props) {
-  const { children, scrollBehavior, window } = props
+  const { children, scrollBehavior} = props
 
   return (
     <>
@@ -66,12 +67,9 @@ export function TopNavBar({ scrollBehavior, ...props }) {
       >
         <AppBar>
           <Toolbar>
-            <Typography
-              variant="h5"
-              component="div"
-            >
-              Test
-            </Typography>
+            <IconButton aria-label="logo">
+              <HomeIcon/>
+            </IconButton>
           </Toolbar>
         </AppBar>
       </ScrollBehavior>

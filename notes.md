@@ -15,6 +15,9 @@ I've got the quick and dirty copy and paste site set up. Instead of actually jus
 - blocks theme is to encapsalte the temporary inclusion stuff from the front. 
 - the core-mui theme will probably implement the basic themeing stuff and potentially the deps from including a particular styling framework. 
 
+### Typescript Compromise.
+For the time being I will use PropTypes to stand in for actual TypeScript implementation. This will keep me generally looking at the typing. Sort of. Not sure now that I'm saying it. I think for now though it will be faster for me to just build in straight JS and then just move everything over to TS.
+
 ## Core Theme
 Mostly just going to load all the work onto this package for the time being. I will split stuff off as it makes sense though. 
 - Includes a local directory for building plugins that will be used in the core theme, at least to begin with. 
