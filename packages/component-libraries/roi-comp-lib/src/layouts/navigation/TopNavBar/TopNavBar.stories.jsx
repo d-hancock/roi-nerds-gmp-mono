@@ -1,5 +1,6 @@
 import React from "react"
 import { Box } from "@mui/material"
+import { navData } from "../../../__fixtures__"
 
 import { TopNavBar } from "./TopNavBar"
 
