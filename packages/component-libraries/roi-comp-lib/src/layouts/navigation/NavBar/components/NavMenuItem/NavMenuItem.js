@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography"
 import Grid from "@mui/material/Grid"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 
-const NavMenuItem = ({
+export const NavMenuItem = ({
   id,
   layout,
   menuType,
@@ -16,8 +16,6 @@ const NavMenuItem = ({
   defaultLink,
   navItems,
   cta,
-  title,
-  items,
   colorInvert = false,
 }) => {
   const theme = useTheme()
@@ -26,7 +24,7 @@ const NavMenuItem = ({
   const [openedPopoverId, setOpenedPopoverId] = useState(null)
 
   const handleClick = (event, popoverId) => {
-    setAnchorEl(event.target)
+    setAnchorEl(event.currentTarget)
     setOpenedPopoverId(popoverId)
   }
 
@@ -40,11 +38,12 @@ const NavMenuItem = ({
     setActiveLink(window && window.location ? window.location.pathname : "")
   }, [])
 
-  const hasActiveLink = () => items.find((i) => i.href === activeLink)
-  const linkColor = colorInvert ? "common.white" : "text.primary"
+  const hasActiveLink = () => navItems.find((i) => i.link === activeLink)
+
+  const activeStyling = openedPopoverId === id || hasActiveLink()
 
   return (
-    <Box>
+    <>
       <Box
         display={"flex"}
         alignItems={"center"}
@@ -52,21 +51,26 @@ const NavMenuItem = ({
         sx={{ cursor: "pointer" }}
         onClick={(e) => handleClick(e, id)}
       >
-        <Typography
-          fontWeight={openedPopoverId === id || hasActiveLink() ? 700 : 400}
-          color={linkColor}
-        >
-          {title}
-        </Typography>
-        <ExpandMoreIcon
+        <Button
+          variant="text"
+          fullWidth
           sx={{
-            marginLeft: theme.spacing(1 / 4),
-            width: 16,
-            height: 16,
-            transform: openedPopoverId === id ? "rotate(180deg)" : "none",
-            color: linkColor,
+            justifyContent: "flex-start",
+            color: "text.primary",
+            fontWeight: activeStyling ? 700 : 400,
           }}
-        />
+        >
+          {name}
+          <ExpandMoreIcon
+            sx={{
+              marginLeft: theme.spacing(1 / 4),
+              width: 16,
+              height: 16,
+              transform: openedPopoverId === id ? "rotate(180deg)" : "none",
+              color: "text.primary",
+            }}
+          />
+        </Button>
       </Box>
       <Popover
         elevation={3}
@@ -84,7 +88,7 @@ const NavMenuItem = ({
         }}
         sx={{
           ".MuiPaper-root": {
-            maxWidth: items.length > 12 ? 350 : 250,
+            maxWidth: navItems.length > 12 ? 350 : 250,
             padding: 2,
             marginTop: 2,
             borderTopRightRadius: 0,
@@ -99,53 +103,43 @@ const NavMenuItem = ({
           container
           spacing={0.5}
         >
-          {items.map((p, i) => (
+          {navItems.map((p, i) => (
             <Grid
               item
               key={i}
-              xs={items.length > 12 ? 6 : 12}
+              xs={navItems.length > 12 ? 6 : 12}
             >
               <Button
                 component={"a"}
-                href={p.href}
+                href={p.link}
                 fullWidth
                 sx={{
                   justifyContent: "flex-start",
                   color:
-                    activeLink === p.href
+                    activeLink === p.link
                       ? theme.palette.primary.main
                       : theme.palette.text.primary,
                   backgroundColor:
-                    activeLink === p.href
+                    activeLink === p.link
                       ? alpha(theme.palette.primary.main, 0.1)
                       : "transparent",
-                  fontWeight: activeLink === p.href ? 600 : 400,
+                  fontWeight: activeLink === p.link ? 600 : 400,
                 }}
               >
-                {p.title}
-                {p.isNew && (
-                  <Box
-                    padding={0.5}
-                    display={"inline-flex"}
-                    borderRadius={1}
-                    bgcolor={"primary.main"}
-                    marginLeft={2}
-                  >
-                    <Typography
-                      variant={"caption"}
-                      sx={{ color: "common.white", lineHeight: 1 }}
-                    >
-                      new
-                    </Typography>
-                  </Box>
-                )}
+                {p.name}
               </Button>
             </Grid>
           ))}
         </Grid>
       </Popover>
-    </Box>
+    </>
   )
+}
+
+NavMenuItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  navItems: PropTypes.array.isRequired,
+  name: PropTypes.string.isRequired,
 }
 
 export default NavMenuItem

@@ -11,10 +11,9 @@ export default {
 
 const Template = (args) => <NavItem {...args} />
 
-export const Story = Template.bind({})
-Story.args = {
-  title: "hey there",
-  id: "I'm an id",
-  items: navData.navLinks,
-  colorInvert: false,
+export const Default = Template.bind({})
+Default.args = {
+  id: "test",
+  name: "Test",
+  link: "",
 }

@@ -1,12 +1,5 @@
 import React from "react"
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  useScrollTrigger,
-  Slide, IconButton,
-} from "@mui/material"
-import HomeIcon from '@mui/icons-material/Home';
+import { Slide, useScrollTrigger } from "@mui/material"
 
 function HideOnScroll(props) {
   const { children, window } = props
@@ -44,8 +37,8 @@ function ElevationScroll(props) {
   })
 }
 
-function ScrollBehavior(props) {
-  const { children, scrollBehavior} = props
+export function ScrollBehavior(props) {
+  const { children, scrollBehavior } = props
 
   return (
     <>
@@ -58,23 +51,4 @@ function ScrollBehavior(props) {
   )
 }
 
-export function TopNavBar({ scrollBehavior, ...props }) {
-  return (
-    <>
-      <ScrollBehavior
-        scrollBehavior={scrollBehavior}
-        {...props}
-      >
-        <AppBar>
-          <Toolbar>
-            <IconButton aria-label="logo">
-              <HomeIcon/>
-            </IconButton>
-          </Toolbar>
-        </AppBar>
-      </ScrollBehavior>
-    </>
-  )
-}
-
-export default TopNavBar
+export default ScrollBehavior
