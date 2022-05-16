@@ -19,7 +19,6 @@ import {
   LinksGroup,
 } from "./components"
 
-
 export function NavBar({ scrollBehavior, navLinks, ...props }) {
   return (
     <>

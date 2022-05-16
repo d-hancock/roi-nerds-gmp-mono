@@ -9,41 +9,41 @@ export const parameters = {
       date: /Date$/,
     },
   },
-  statusesParams,
+  // statusesParams,
 }
 
-const statusesParams = {
-  status: {
-    statuses: {
-      placeholder: {
-        background: "#de1db1",
-        color: "#ffffff",
-        description: "This component is currently a placeholder.",
-      },
-    },
-    statuses: {
-      mvp: {
-        background: "#de1db1",
-        color: "#ffffff",
-        description: "This component is currently an MVP.",
-      },
-    },
-    statuses: {
-      needsStatus: {
-        background: "#de1d37",
-        color: "#ffffff",
-        description: "This component needs statuses assigned.",
-      },
-    },
-  },
-}
+// const statusesParams = {
+//   status: {
+//     statuses: {
+//       placeholder: {
+//         background: "#de1db1",
+//         color: "#ffffff",
+//         description: "This component is currently a placeholder.",
+//       },
+//     },
+//     statuses: {
+//       mvp: {
+//         background: "#de1db1",
+//         color: "#ffffff",
+//         description: "This component is currently an MVP.",
+//       },
+//     },
+//     statuses: {
+//       needsStatus: {
+//         background: "#de1d37",
+//         color: "#ffffff",
+//         description: "This component needs statuses assigned.",
+//       },
+//     },
+//   },
+// }
 
 const defaultTheme = createTheme()
 
 export const decorators = [
-  (Story) => (
+  (story) => (
     <ThemeProvider theme={defaultTheme}>
-      <Story />
+      {story()}
     </ThemeProvider>
   ),
 ]

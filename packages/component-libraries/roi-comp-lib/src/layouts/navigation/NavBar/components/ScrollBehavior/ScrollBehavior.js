@@ -37,14 +37,14 @@ function ElevationScroll(props) {
   })
 }
 
-export function ScrollBehavior(props) {
-  const { children, scrollBehavior } = props
-
+export function ScrollBehavior({ children, scrollBehavior, ...props }) {
   return (
     <>
-      {scrollBehavior === "hide" && <HideOnScroll>{children}</HideOnScroll>}
+      {scrollBehavior === "hide" && (
+        <HideOnScroll {...props}>{children}</HideOnScroll>
+      )}
       {scrollBehavior === "elevate" && (
-        <ElevationScroll>{children}</ElevationScroll>
+        <ElevationScroll {...props}>{children}</ElevationScroll>
       )}
       {scrollBehavior === "none" && <>{children}</>}
     </>
