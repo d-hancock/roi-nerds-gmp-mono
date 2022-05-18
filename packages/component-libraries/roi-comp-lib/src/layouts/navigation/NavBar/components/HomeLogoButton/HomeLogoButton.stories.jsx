@@ -3,7 +3,7 @@ import React from 'react';
 import { HomeLogoButton } from './HomeLogoButton';
 
 export default {
-  title: 'Layouts/navigation/HomeLogoButton',
+  title: 'Layouts/navigation/NavBar/HomeLogoButton',
   component: HomeLogoButton,
   args: {},
 }

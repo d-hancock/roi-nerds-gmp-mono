@@ -3,7 +3,7 @@ import React from "react"
 import NavCta from "./NavCta"
 
 export default {
-  title: "Layouts/navigation/NavCta",
+  title: "Layouts/navigation/shared-comps/NavCta",
   component: NavCta,
   args: {},
   // parameters: {

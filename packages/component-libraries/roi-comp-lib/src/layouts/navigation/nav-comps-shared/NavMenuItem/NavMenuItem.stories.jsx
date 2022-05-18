@@ -1,10 +1,10 @@
 import React from "react"
-import { navData } from "../../../../../__fixtures__"
+import { navData } from "../../../../__fixtures__"
 
 import NavMenuItem from "./NavMenuItem"
 
 export default {
-  title: "Layouts/navigation/NavMenuItem",
+  title: "Layouts/navigation/shared-comps/NavMenuItem",
   component: NavMenuItem,
   args: {},
 }

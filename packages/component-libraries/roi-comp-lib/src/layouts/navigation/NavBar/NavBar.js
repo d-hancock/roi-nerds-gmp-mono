@@ -11,13 +11,13 @@ import {
   Stack,
 } from "@mui/material"
 import HomeIcon from "@mui/icons-material/Home"
+import { ScrollBehavior, LinksGroup } from "./components"
 import {
-  NavCta,
   NavItem,
   NavMenuItem,
-  ScrollBehavior,
-  LinksGroup,
-} from "./components"
+  NavCta,
+  HamburgerMenu,
+} from "../nav-comps-shared"
 
 export function NavBar({ scrollBehavior, navLinks, ...props }) {
   return (
@@ -32,6 +32,7 @@ export function NavBar({ scrollBehavior, navLinks, ...props }) {
               justifyContent: "space-between",
             }}
           >
+            <HamburgerMenu />
             <IconButton aria-label="logo">
               <HomeIcon />
             </IconButton>

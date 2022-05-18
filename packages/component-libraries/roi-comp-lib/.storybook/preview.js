@@ -1,60 +1,70 @@
-import React from "react"
-import { createTheme, ThemeProvider } from "@mui/material"
+import { action } from "@storybook/addon-actions"
+import { MINIMAL_VIEWPORTS, INITIAL_VIEWPORTS } from "@storybook/addon-viewport"
+import { themeDecorator } from "./sbDecorators"
+
+// --- Parameters ---
+// Parameters for Backgrounds
+const backgrounds = {
+  default: "Light Grey",
+  values: [
+    { name: "White", value: "#ffffff" },
+    { name: "Black", value: "#000000" },
+    { name: "Light Grey", value: "#D3D3D3" },
+    { name: "Dark Grey", value: "#A9A9A9" },
+    { name: "Transparent", value: "#00FFFFFF" },
+  ],
+}
+
+// Parameters for Paddings
+const paddings = {
+  values: [
+    { name: "Small", value: "16px" },
+    { name: "Medium", value: "32px" },
+    { name: "Large", value: "64px" },
+  ],
+  default: "Medium",
+}
+
+// Parameter for Viewports
+const viewport = {
+  viewports: {
+    ...MINIMAL_VIEWPORTS,
+    ...INITIAL_VIEWPORTS,
+  },
+}
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
-  // statusesParams,
+  // docs: { page: DocsPage },
+  // dependencies: { withStoriesOnly: true, hideEmpty: true },
+  backgrounds,
+  viewport,
+  paddings,
+  controls: { expanded: true },
 }
 
-// const statusesParams = {
-//   status: {
-//     statuses: {
-//       placeholder: {
-//         background: "#de1db1",
-//         color: "#ffffff",
-//         description: "This component is currently a placeholder.",
-//       },
-//     },
-//     statuses: {
-//       mvp: {
-//         background: "#de1db1",
-//         color: "#ffffff",
-//         description: "This component is currently an MVP.",
-//       },
-//     },
-//     statuses: {
-//       needsStatus: {
-//         background: "#de1d37",
-//         color: "#ffffff",
-//         description: "This component needs statuses assigned.",
-//       },
-//     },
-//   },
-// }
-
-const defaultTheme = createTheme()
-
 export const decorators = [
-  (story) => (
-    <ThemeProvider theme={defaultTheme}>
-      {story()}
-    </ThemeProvider>
-  ),
+  // My theme provider toolbar
+  // withThemeProvider,
+  // ---------------------
+  themeDecorator,
 ]
 
-// Mui theme provider as a decorator so that each story is wrapped
-// by an Mui theme.
+// Gatsby's Link overrides:
+// Gatsby Link calls the `enqueue` & `hovering` methods on the global variable ___loader.
+// This global object isn't set in storybook context. We override it to empty functions (no-op),
+// so gatsby link doesn't throw any errors.
+global.___loader = {
+  enqueue: () => {},
+  hovering: () => {},
+}
 
-// const MuiThemeDecorator = (Story) => {
-//   return (
-//     <ThemeProvider theme={defaultTheme}>
-//       <Story />
-//     </ThemeProvider>
-//   )
-// }
+// __PATH_PREFIX__ is used inside gatsby-link an other various places. For storybook not to crash we need to set it as well.
+global.__PATH_PREFIX__ = ""
+
+// Navigating through a gatsby app using gatsby-link or any other gatsby component will use the `___navigate` method.
+// In storybook it doesn't make sense to do an actual navigate, instead we want to log an action. Checkout the actions addon docs https://github.com/storybookjs/storybook/tree/master/addons/actions.
+
+window.___navigate = (pathname) => {
+  action("NavigateTo:")(pathname)
+}

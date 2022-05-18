@@ -3,7 +3,7 @@ module.exports = {
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
+    // "@storybook/addon-interactions",
     {
       name: "@storybook/addon-storysource",
       options: {
@@ -12,9 +12,10 @@ module.exports = {
         },
       },
     },
-
+    "@storybook/addon-viewport",
+    "storybook-addon-paddings",
     "storybook-mobile",
-    "storybook-addon-pseudo-states",
+    // "storybook-addon-pseudo-states",
     "storybook-addon-breakpoints",
     "@etchteam/storybook-addon-status",
     "storybook-fixtures",

@@ -1,11 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Stack } from "@mui/material"
-import { NavItem, NavMenuItem } from "../../components"
+import { NavItem, NavMenuItem } from "../../../nav-comps-shared"
+import { visFlex } from "../../../../../styles"
 
 export const LinksGroup = ({ links }) => {
   return (
-    <Stack direction="row">
+    <Stack
+      direction="row"
+      sx={{
+        ...visFlex.lgUp
+      }}
+    >
       {links.map((p, i) => {
         return p.navItems ? (
           <NavMenuItem
