@@ -7,13 +7,13 @@ export default {
   component: HamburgerMenu,
 }
 
-const mockOnSideBarOpen = () => {
+const mockOnSidebarOpen = () => {
   console.log("Mock Open Sidebar")
 }
 
 const Template = (args) => (
   <HamburgerMenu
-    onSidebarOpen={mockOnSideBarOpen}
+    onSidebarOpen={mockOnSidebarOpen}
     {...args}
   />
 )

@@ -5,13 +5,13 @@ import { themeDecorator } from "./sbDecorators"
 // --- Parameters ---
 // Parameters for Backgrounds
 const backgrounds = {
-  default: "Light Grey",
+  default: "Transparent",
   values: [
     { name: "White", value: "#ffffff" },
     { name: "Black", value: "#000000" },
     { name: "Light Grey", value: "#D3D3D3" },
     { name: "Dark Grey", value: "#A9A9A9" },
-    { name: "Transparent", value: "#00FFFFFF" },
+    { name: "Transparent", value: "#00FFFF00" },
   ],
 }
 

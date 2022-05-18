@@ -9,19 +9,35 @@ export default {
   component: NavBar,
   argTypes: {
     scrollBehavior: {
+      control: { type: "select" },
       options: ["hide", "elevate", "none"],
-      control: { type: "radio" },
-      defaultValue: "hide",
     },
   },
-  decorators: [(story) => <Box sx={{ height: 900 }}>{story()}</Box>],
+  // parameters: {
+  //   controls: {
+  //     exclude: ["onSidebarOpen"],
+  //   },
+  // },
+  // decorators: [(story) => <Box sx={{ height: 900 }}>{story()}</Box>],
 }
 
-const Template = (args) => <NavBar {...args} />
+const mockOnSidebarOpen = () => {
+  console.log("Mock Open Sidebar")
+}
+
+const Template = (args) => (
+  <>
+    <NavBar
+      onSidebarOpen={mockOnSidebarOpen}
+      {...args}
+    />
+    <Box sx={{ height: 400 }}/>
+  </>
+)
 
 export const Default = Template.bind({})
 
 Default.args = {
-  navLinks: navData.navLinks,
   scrollBehavior: "hide",
+  navLinks: navData.navLinks,
 }

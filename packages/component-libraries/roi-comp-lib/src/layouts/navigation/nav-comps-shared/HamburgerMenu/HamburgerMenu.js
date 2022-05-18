@@ -1,5 +1,6 @@
 import React from "react"
-import { Button, Box, alpha, useTheme } from "@mui/material"
+import PropTypes from "prop-types"
+import { IconButton, Box, alpha, useTheme } from "@mui/material"
 import MenuIcon from "@mui/icons-material/Menu"
 import { hidFlex } from "../../../../styles"
 
@@ -12,7 +13,7 @@ export const HamburgerMenu = ({ onSidebarOpen }) => {
       }}
       alignItems={"center"}
     >
-      <Button
+      <IconButton
         onClick={() => onSidebarOpen()}
         aria-label="Menu"
         variant={"outlined"}
@@ -24,9 +25,13 @@ export const HamburgerMenu = ({ onSidebarOpen }) => {
         }}
       >
         <MenuIcon />
-      </Button>
+      </IconButton>
     </Box>
   )
+}
+
+HamburgerMenu.propTypes = {
+  onSidebarOpen: PropTypes.func.isRequired,
 }
 
 export default HamburgerMenu

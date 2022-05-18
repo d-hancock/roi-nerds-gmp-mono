@@ -19,7 +19,7 @@ import {
   HamburgerMenu,
 } from "../nav-comps-shared"
 
-export function NavBar({ scrollBehavior, navLinks, ...props }) {
+export function NavBar({ scrollBehavior, navLinks, onSidebarOpen, ...props }) {
   return (
     <>
       <ScrollBehavior
@@ -32,7 +32,7 @@ export function NavBar({ scrollBehavior, navLinks, ...props }) {
               justifyContent: "space-between",
             }}
           >
-            <HamburgerMenu />
+            <HamburgerMenu onSidebarOpen={onSidebarOpen} />
             <IconButton aria-label="logo">
               <HomeIcon />
             </IconButton>
@@ -48,6 +48,7 @@ export function NavBar({ scrollBehavior, navLinks, ...props }) {
 NavBar.propTypes = {
   scrollBehavior: PropTypes.string.isRequired,
   navLinks: PropTypes.array.isRequired,
+  onSidebarOpen: PropTypes.func.isRequired,
 }
 
 export default NavBar

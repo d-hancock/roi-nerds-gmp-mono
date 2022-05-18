@@ -37,7 +37,11 @@ function ElevationScroll(props) {
   })
 }
 
-export function ScrollBehavior({ children, scrollBehavior, ...props }) {
+export function ScrollBehavior({
+  children,
+  scrollBehavior = "none",
+  ...props
+}) {
   return (
     <>
       {scrollBehavior === "hide" && (
