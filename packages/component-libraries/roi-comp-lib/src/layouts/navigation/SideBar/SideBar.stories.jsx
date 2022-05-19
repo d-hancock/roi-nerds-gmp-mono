@@ -1,14 +1,28 @@
-import React from 'react';
+import React from "react"
 
-import { SideBar } from './SideBar';
+import SideBar from "./SideBar"
+import { Button, Box } from "@mui/material"
 
 export default {
-  title: 'Layouts/navigation/SideBar',
+  title: "Layouts/navigation/SideBar",
   component: SideBar,
-  args: {},
+  argTypes: {
+    onClose: {
+      action: "close",
+    },
+    variant: {
+      control: "select",
+      options: ["permanent", "persistent", "temporary"],
+    },
+  },
 }
 
-const Template = (args) => <SideBar {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {};
+const Template = (args) => {
+  return <SideBar {...args} />
+}
+export const Default = Template.bind({})
+Default.args = {
+  open: true,
+  variant: "temporary",
+  children: <Box>Hey There!</Box>
+}

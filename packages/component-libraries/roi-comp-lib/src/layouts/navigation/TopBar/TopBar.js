@@ -11,7 +11,7 @@ import {
   Stack,
 } from "@mui/material"
 import HomeIcon from "@mui/icons-material/Home"
-import { ScrollBehavior, LinksGroup } from "./components"
+import { ScrollBehavior, TopBarNavGroup } from "./components"
 import {
   NavItem,
   NavMenuItem,
@@ -19,7 +19,7 @@ import {
   HamburgerMenu,
 } from "../nav-comps-shared"
 
-export function NavBar({ scrollBehavior, navLinks, onSidebarOpen, ...props }) {
+export function TopBar({ scrollBehavior, navLinks, onSidebarOpen, ...props }) {
   return (
     <>
       <ScrollBehavior
@@ -36,7 +36,7 @@ export function NavBar({ scrollBehavior, navLinks, onSidebarOpen, ...props }) {
             <IconButton aria-label="logo">
               <HomeIcon />
             </IconButton>
-            <LinksGroup links={navLinks} />
+            <TopBarNavGroup links={navLinks} />
             <NavCta text={"Contact Us"} />
           </Toolbar>
         </AppBar>
@@ -45,10 +45,10 @@ export function NavBar({ scrollBehavior, navLinks, onSidebarOpen, ...props }) {
   )
 }
 
-NavBar.propTypes = {
+TopBar.propTypes = {
   scrollBehavior: PropTypes.string.isRequired,
   navLinks: PropTypes.array.isRequired,
   onSidebarOpen: PropTypes.func.isRequired,
 }
 
-export default NavBar
+export default TopBar

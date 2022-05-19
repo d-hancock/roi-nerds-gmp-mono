@@ -4,7 +4,7 @@ import { Stack } from "@mui/material"
 import { NavItem, NavMenuItem } from "../../../nav-comps-shared"
 import { visFlex } from "../../../../../styles"
 
-export const LinksGroup = ({ links }) => {
+export const TopBarNavGroup = ({ links }) => {
   return (
     <Stack
       direction="row"
@@ -33,8 +33,8 @@ export const LinksGroup = ({ links }) => {
   )
 }
 
-LinksGroup.propTypes = {
+TopBarNavGroup.propTypes = {
   links: PropTypes.array.isRequired,
 }
 
-export default LinksGroup
+export default TopBarNavGroup

@@ -2,23 +2,17 @@ import React from "react"
 import { Box } from "@mui/material"
 import { navData } from "../../../__fixtures__"
 
-import NavBar from "./NavBar"
+import TopBar from "./TopBar"
 
 export default {
-  title: "Layouts/navigation/NavBar",
-  component: NavBar,
+  title: "Layouts/navigation/TopBar",
+  component: TopBar,
   argTypes: {
     scrollBehavior: {
       control: { type: "select" },
       options: ["hide", "elevate", "none"],
     },
   },
-  // parameters: {
-  //   controls: {
-  //     exclude: ["onSidebarOpen"],
-  //   },
-  // },
-  // decorators: [(story) => <Box sx={{ height: 900 }}>{story()}</Box>],
 }
 
 const mockOnSidebarOpen = () => {
@@ -27,11 +21,11 @@ const mockOnSidebarOpen = () => {
 
 const Template = (args) => (
   <>
-    <NavBar
+    <TopBar
       onSidebarOpen={mockOnSidebarOpen}
       {...args}
     />
-    <Box sx={{ height: 400 }}/>
+    <Box sx={{ height: 900 }} />
   </>
 )
 

@@ -93,11 +93,8 @@ const recentPosts = [
   { id: 3, name: "Improve your customer experience", href: "#" },
 ]
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ")
-}
 
-export default function Example() {
+function Example() {
   return (
     <Popover className="relative bg-white">
       <Transition
@@ -134,6 +131,8 @@ export default function Example() {
     </Popover>
   )
 }
+
+export default Example;
 function BottomSection() {
   const linkStyles = "text-base font-medium text-gray-900 hover:text-gray-700"
   return (
