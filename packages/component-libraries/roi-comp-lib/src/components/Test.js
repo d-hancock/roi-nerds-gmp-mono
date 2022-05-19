@@ -3,7 +3,7 @@ import * as React from "react"
 
 const Test = () => {
   return (
-    <div>My awesome component</div>
+    <div tw="text-white">My awesome component</div>
   )
 }
 

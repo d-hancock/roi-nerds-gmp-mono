@@ -1,4 +1,5 @@
 import React from "react"
+import { GlobalStyles } from "twin.macro"
 import {
   ThemeProvider,
   createTheme,
@@ -12,6 +13,7 @@ export const themeDecorator = (story) => (
   <StyledEngineProvider injectFirst>
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
+      <GlobalStyles />
       {story()}
     </ThemeProvider>
   </StyledEngineProvider>

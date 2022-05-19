@@ -4616,6 +4616,7 @@ __metadata:
   resolution: "@roi/roi-comp-lib@workspace:packages/component-libraries/roi-comp-lib"
   dependencies:
     "@babel/core": ^7.17.10
+    "@emotion/babel-preset-css-prop": ^11.2.0
     "@emotion/react": ^11.7.1
     "@emotion/server": ^11.4.0
     "@emotion/styled": ^11.6.0
@@ -4638,6 +4639,7 @@ __metadata:
     "@storybook/react": ^6.4.22
     "@storybook/testing-library": ^0.0.11
     "@types/aos": ^3.0.4
+    "@types/babel-plugin-macros": ^2.8.5
     "@types/babel__core": ^7
     "@types/eslint": ^8.4.2
     "@types/eslint-plugin-prettier": ^3.1.0
@@ -4647,6 +4649,7 @@ __metadata:
     "@types/react": ^17.0.44
     "@types/react-dom": ^17.0.16
     "@types/react-helmet": ^6.1.5
+    "@types/react-is": ^17.0.3
     "@types/react-lazy-load-image-component": ^1.5.2
     "@types/react-slick": ^0.23.8
     "@types/react-syntax-highlighter": ^15.5.1
@@ -4660,7 +4663,9 @@ __metadata:
     aos: ^2.3.4
     babel-eslint: ^10.1.0
     babel-loader: ^8.2.5
+    babel-plugin-macros: ^3.1.0
     babel-plugin-styled-components: ^2.0.2
+    babel-plugin-twin: ^1.0.2
     card-validator: ^8.1.1
     cross-env: ^7.0.2
     deepmerge: ^4.2.2
@@ -4690,6 +4695,7 @@ __metadata:
     react-dom: ^17.0.1
     react-helmet: ^6.1.0
     react-image-lightbox: ^5.1.4
+    react-is: ^17.0.1
     react-lazy-load-image-component: ^1.5.1
     react-slick: ^0.28.1
     react-syntax-highlighter: ^15.4.5
@@ -4704,6 +4710,8 @@ __metadata:
     storybook-dark-mode: ^1.1.0
     storybook-fixtures: ^0.11.0
     storybook-mobile: ^1.0.0
+    tailwindcss: ^2.2.7
+    twin.macro: ^2.6.2
     typescript: ^4.6.4
     typesync: ^0.9.1
     yup: ^0.32.11
@@ -7683,7 +7691,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/babel__core@npm:^7":
+"@types/babel-plugin-macros@npm:^2.8.5":
+  version: 2.8.5
+  resolution: "@types/babel-plugin-macros@npm:2.8.5"
+  dependencies:
+    "@types/babel__core": "*"
+  checksum: 2a4ade60716c320dd20f0b1db5d2dc591304b8d20a8b0d86175b43024c91df817e0f5d960ac6838b9fe6f6b3465c3f91dd3c79278cc675542b3993061df932df
+  languageName: node
+  linkType: hard
+
+"@types/babel__core@npm:*, @types/babel__core@npm:^7, @types/babel__core@npm:^7.1.19":
   version: 7.1.19
   resolution: "@types/babel__core@npm:7.1.19"
   dependencies:
@@ -8184,6 +8201,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-dom@npm:^17.0.17":
+  version: 17.0.17
+  resolution: "@types/react-dom@npm:17.0.17"
+  dependencies:
+    "@types/react": ^17
+  checksum: 23caf98aa03e968811560f92a2c8f451694253ebe16b670929b24eaf0e7fa62ba549abe9db0ac028a9d8a9086acd6ab9c6c773f163fa21224845edbc00ba6232
+  languageName: node
+  linkType: hard
+
 "@types/react-helmet@npm:^6.1.5":
   version: 6.1.5
   resolution: "@types/react-helmet@npm:6.1.5"
@@ -8193,7 +8219,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-is@npm:^16.7.1 || ^17.0.0":
+"@types/react-is@npm:^16.7.1 || ^17.0.0, @types/react-is@npm:^17.0.3":
   version: 17.0.3
   resolution: "@types/react-is@npm:17.0.3"
   dependencies:
@@ -8276,6 +8302,17 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: ebee02778ca08f954c316dc907802264e0121c87b8fa2e7e0156ab0ef2a1b0a09d968c016a3600ec4c9a17dc09b4274f292d9b15a1a5369bb7e4072def82808f
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^17.0.45":
+  version: 17.0.45
+  resolution: "@types/react@npm:17.0.45"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: 3cc13a02824c13f6fa4807a83abd065ac1d9943359e76bd995cc7cd2b4148c1176ebd54a30a9f4eb8a0f141ff359d712876f256c4fee707e4290607ef8410b3e
   languageName: node
   linkType: hard
 
@@ -27296,6 +27333,11 @@ __metadata:
     "@storybook/addon-essentials": ^6.3.12
     "@storybook/addon-links": ^6.3.12
     "@storybook/react": ^6.3.12
+    "@types/babel-plugin-macros": ^2.8.5
+    "@types/babel__core": ^7.1.19
+    "@types/react": ^17.0.45
+    "@types/react-dom": ^17.0.17
+    "@types/react-is": ^17.0.3
     babel-loader: ^8.2.2
     babel-plugin-macros: ^3.1.0
     babel-plugin-twin: ^1.0.2
