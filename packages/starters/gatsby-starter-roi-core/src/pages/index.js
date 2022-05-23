@@ -133,6 +133,7 @@ const IndexPage = () => {
       <h1 style={headingStyles}>
         Congratulations
         <br />
+        <span tw="text-4xl text-green-500">quick test</span>
         <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
         <span role="img" aria-label="Party popper emojis">
           🎉🎉🎉

@@ -4447,6 +4447,8 @@ __metadata:
     react: ^17.0.1
     react-dom: ^17.0.1
     react-helmet: ^6.1.0
+    tailwindcss: ^2.2.7
+    twin.macro: ^2.6.2
     typescript: ^4.6.4
     typesync: ^0.9.1
   languageName: unknown
@@ -10474,6 +10476,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-preset-gatsby@npm:^2.14.0":
+  version: 2.14.0
+  resolution: "babel-preset-gatsby@npm:2.14.0"
+  dependencies:
+    "@babel/plugin-proposal-class-properties": ^7.14.0
+    "@babel/plugin-proposal-nullish-coalescing-operator": ^7.14.5
+    "@babel/plugin-proposal-optional-chaining": ^7.14.5
+    "@babel/plugin-syntax-dynamic-import": ^7.8.3
+    "@babel/plugin-transform-classes": ^7.15.4
+    "@babel/plugin-transform-runtime": ^7.15.0
+    "@babel/plugin-transform-spread": ^7.14.6
+    "@babel/preset-env": ^7.15.4
+    "@babel/preset-react": ^7.14.0
+    "@babel/runtime": ^7.15.4
+    babel-plugin-dynamic-import-node: ^2.3.3
+    babel-plugin-macros: ^3.1.0
+    babel-plugin-transform-react-remove-prop-types: ^0.4.24
+    gatsby-core-utils: ^3.14.0
+    gatsby-legacy-polyfills: ^2.14.0
+  peerDependencies:
+    "@babel/core": ^7.11.6
+    core-js: ^3.0.0
+  checksum: 7c087c137089ed9ddcf12db629be2eeb1f0e6e5771b73c3b1540cd3441d33076bd1bbc3244deac5247054bd8b533272568b079bfcf8bf8714e7107399d7bd813
+  languageName: node
+  linkType: hard
+
 "babel-preset-react-app@npm:^10.0.1":
   version: 10.0.1
   resolution: "babel-preset-react-app@npm:10.0.1"
@@ -15581,7 +15609,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-extra@npm:^10.0.0":
+"fs-extra@npm:^10.0.0, fs-extra@npm:^10.1.0":
   version: 10.1.0
   resolution: "fs-extra@npm:10.1.0"
   dependencies:
@@ -15808,6 +15836,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-core-utils@npm:^3.14.0":
+  version: 3.14.0
+  resolution: "gatsby-core-utils@npm:3.14.0"
+  dependencies:
+    "@babel/runtime": ^7.15.4
+    ci-info: 2.0.0
+    configstore: ^5.0.1
+    fastq: ^1.13.0
+    file-type: ^16.5.3
+    fs-extra: ^10.1.0
+    got: ^11.8.3
+    import-from: ^4.0.0
+    lmdb: ^2.2.6
+    lock: ^1.1.0
+    node-object-hash: ^2.3.10
+    proper-lockfile: ^4.1.2
+    resolve-from: ^5.0.0
+    tmp: ^0.2.1
+    xdg-basedir: ^4.0.0
+  checksum: 286e3fd2d556b4840b0384741067b03e6e4ff2dab375eccfe142dc01b66fb1f6eec974c4ba1321253aff3173ccb982b3d58061c6eb1b6a3a67bc86b7b62d8331
+  languageName: node
+  linkType: hard
+
 "gatsby-graphiql-explorer@npm:^2.13.0":
   version: 2.13.0
   resolution: "gatsby-graphiql-explorer@npm:2.13.0"
@@ -15824,6 +15875,16 @@ __metadata:
     "@babel/runtime": ^7.15.4
     core-js-compat: 3.9.0
   checksum: 0a0548c7b65e4329cf0009464c7e8cd73044f928b58b77f0c5e0bbc7fbf0461ad5d0bd3d4bfccce42483ea0e34937a00ff579c977f34cb462f9bcde76a0117e8
+  languageName: node
+  linkType: hard
+
+"gatsby-legacy-polyfills@npm:^2.14.0":
+  version: 2.14.0
+  resolution: "gatsby-legacy-polyfills@npm:2.14.0"
+  dependencies:
+    "@babel/runtime": ^7.15.4
+    core-js-compat: 3.9.0
+  checksum: 1b53ef5c8c0ab8a1f05a916208238f4d98401fc0fcdaf77960dda29dbc744596d9d8608d7ef3887e5e316da12a1a3fbd7ec6e4b6966e6d6ea7b0496ef7cab803
   languageName: node
   linkType: hard
 
@@ -16033,6 +16094,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-plugin-mui-emotion@workspace:packages/plugins/gatsby-plugin-mui-emotion":
+  version: 0.0.0-use.local
+  resolution: "gatsby-plugin-mui-emotion@workspace:packages/plugins/gatsby-plugin-mui-emotion"
+  languageName: unknown
+  linkType: soft
+
 "gatsby-plugin-offline@npm:^5.0.0":
   version: 5.13.0
   resolution: "gatsby-plugin-offline@npm:5.13.0"
@@ -16138,6 +16205,12 @@ __metadata:
   checksum: 9dbfaf3cbc0f2e82c574e6f772c6aba3dae650ece560856324f45f54b9f45fad62aa78e87f361c35c2daa891b303e7fbf634c57d78dd8322f361a84059bbde20
   languageName: node
   linkType: hard
+
+"gatsby-plugin-top-layout@workspace:packages/plugins/gatsby-plugin-top-layout":
+  version: 0.0.0-use.local
+  resolution: "gatsby-plugin-top-layout@workspace:packages/plugins/gatsby-plugin-top-layout"
+  languageName: unknown
+  linkType: soft
 
 "gatsby-plugin-typescript@npm:^4.13.0":
   version: 4.13.0
@@ -25202,6 +25275,7 @@ __metadata:
     "@storybook/manager-webpack5": ^6.4.22
     "@storybook/react": ^6.4.22
     "@storybook/testing-library": ^0.0.11
+    "@types/babel-plugin-macros": ^2.8.5
     "@types/babel__core": ^7
     "@types/eslint": ^8
     "@types/eslint-plugin-prettier": ^3.1.0
@@ -25211,6 +25285,9 @@ __metadata:
     "@types/react-dom": ^17.0.16
     "@types/stylelint": ^13.13.3
     babel-loader: ^8.2.5
+    babel-plugin-macros: ^3.1.0
+    babel-plugin-twin: ^1.0.2
+    babel-preset-gatsby: ^2.14.0
     eslint: ^8.15.0
     eslint-config-airbnb: ^18.2.1
     eslint-config-airbnb-typescript: ^14.0.1

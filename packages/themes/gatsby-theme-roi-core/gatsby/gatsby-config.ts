@@ -21,11 +21,13 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
       siteUrl: urljoin(config.website.url, config.pathPrefix),
     },
     plugins: [
-      "gatsby-plugin-top-layout",
+      "gatsby-plugin-emotion",
+      { resolve: require.resolve("../plugins/gatsby-plugin-top-layout") },
       // If you want to use styled components you should add the plugin here.
       // 'gatsby-plugin-styled-components',
-      "gatsby-plugin-mui-emotion",
-      "gatsby-plugin-emotion",
+      {
+        resolve: require.resolve("../plugins/gatsby-plugin-mui-emotion"),
+      },
       {
         resolve: "gatsby-plugin-compile-es6-packages",
         options: {

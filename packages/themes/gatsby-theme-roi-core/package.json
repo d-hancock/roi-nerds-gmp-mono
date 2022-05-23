@@ -82,5 +82,10 @@
     "gatsby": "*",
     "react": "*",
     "react-dom": "*"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "emotion"
+    }
   }
 }

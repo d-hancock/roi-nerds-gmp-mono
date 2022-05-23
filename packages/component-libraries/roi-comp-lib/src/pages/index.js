@@ -1,4 +1,6 @@
 import * as React from "react"
+// import tw from "twin.macro"
+import { Test } from "../components"
 
 // styles
 const pageStyles = {
@@ -133,16 +135,23 @@ const IndexPage = () => {
       <h1 style={headingStyles}>
         Congratulations
         <br />
+        <Test />
         <span tw="text-green-500">Does it work?</span>
         <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
+        <span
+          role="img"
+          aria-label="Party popper emojis"
+        >
           🎉🎉🎉
         </span>
       </h1>
       <p style={paragraphStyles}>
         Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
         update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
+        <span
+          role="img"
+          aria-label="Sunglasses smiley emoji"
+        >
           😎
         </span>
       </p>
@@ -155,8 +164,11 @@ const IndexPage = () => {
             {docLink.text}
           </a>
         </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
+        {links.map((link) => (
+          <li
+            key={link.url}
+            style={{ ...listItemStyles, color: link.color }}
+          >
             <span>
               <a
                 style={linkStyle}
@@ -165,7 +177,10 @@ const IndexPage = () => {
                 {link.text}
               </a>
               {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
+                <span
+                  style={badgeStyle}
+                  aria-label="New Badge"
+                >
                   NEW!
                 </span>
               )}
