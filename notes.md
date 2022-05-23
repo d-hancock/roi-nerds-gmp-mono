@@ -2,13 +2,13 @@
 
 Take notes here about where you left off.
 
-- Currently trying to implement twin for gatsby.
-  - Check on past itterations of this project. Atleast one of them had a working implementation.
+# Notes - Unfinished from previous work
+
 - Need to sort out what aproach I will take to handling the MUI bit of these sites. Maybe I will have to just do the local plugins on each site.
   - that portion of the site is unlikely to need to change much and it sould be simple to refactor it on each site if worst comes to worst.
 - Also trying to figure out what exactly should go into the core theme vs presentational themes vs starters.
 
-# Notes
+# Notes - General
 
 - Going to start in on the core of the functionality we need out of the core theme.
 - Splitting time with the dumb mockup implementation that will be refactored to incorporate the use of the refactored theme.
@@ -59,3 +59,8 @@ Mostly just going to load all the work onto this package for the time being. I w
 - Need to get all packages here using the same versions of the core technologies if possible. That should make it much easier to manage things going forward.
 
 # Monorepo Configuration
+
+The repo configuration needs to be updated to remove confusion about what config is handling what.
+I intend to setup explicit configuations for TypeScript, Babel, WebPack, and Yarn workspaces following [this guide](https://javascript.plainenglish.io/build-react-app-by-using-typescript-yarn-workspaces-webpack-and-babel-d0ad120e72d9)
+
+This needs to be done to make import refactoring less of a pain in the ass once modules are published. This will be important for dealing with the project when its actually in production.
