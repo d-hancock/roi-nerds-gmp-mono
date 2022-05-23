@@ -1,6 +1,18 @@
 {
   "presets": ["babel-preset-gatsby"],
-  "plugins": ["babel-plugin-twin", "babel-plugin-macros"],
+  "plugins": [
+    "babel-plugin-twin",
+    "babel-plugin-macros",
+    [
+      "babel-plugin-module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "@roi/roi-comp-lib": "./packages/component-libraries/roi-comp-lib/src"
+        }
+      }
+    ]
+  ],
   "babelrcRoots": [
     ".",
     "./themes/*",
