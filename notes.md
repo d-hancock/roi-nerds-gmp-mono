@@ -1,4 +1,5 @@
 # Close out Notes
+Trying to figure out how to get gatsby to allow aliased path imports so I can nicely import from comp lib in gatsby.
 
 Take notes here about where you left off.
 
