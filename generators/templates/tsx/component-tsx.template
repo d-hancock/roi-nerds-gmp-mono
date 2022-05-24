@@ -1,0 +1,18 @@
+import * as React from "react";
+
+{{#if props}}
+export interface {{pascalCase name}}Props extends React.HTMLProps<HTMLDivElement> {
+{{#each props}}
+  {{name}}{{#if optional}}?{{/if}}: {{{type}}};
+{{/each}}
+}
+
+{{/if}}
+export const {{pascalCase name}} = ({{#if props}}props: {{pascalCase name}}Props{{/if}}) => {
+  {{#if props}}const {} = props;{{/if}}
+  return (
+    <div>My awesome component</div>
+  );
+};
+
+export default {{pascalCase name}}
