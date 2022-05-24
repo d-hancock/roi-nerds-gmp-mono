@@ -1,6 +1,4 @@
 import * as React from "react"
-// import tw from "twin.macro"
-import { Test } from "../components"
 
 // styles
 const pageStyles = {
@@ -135,8 +133,6 @@ const IndexPage = () => {
       <h1 style={headingStyles}>
         Congratulations
         <br />
-        <Test />
-        <span tw="text-green-500">Does it work?</span>
         <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
         <span
           role="img"

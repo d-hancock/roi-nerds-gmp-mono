@@ -10,3 +10,15 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
      ${configSchema}
    `)
   }
+
+// export const onCreateWebpackConfig: GatsbyNode["onCreateWebpackConfig"] = ({actions, loaders, getConfig}) => {
+//   const config = getConfig()
+
+//   config.modules.rules = [
+//     ...config.modules.rules,
+//     {
+//       ...loaders.js(),
+      
+//     }
+//   ]
+// }

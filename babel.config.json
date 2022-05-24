@@ -2,23 +2,23 @@
   "presets": ["babel-preset-gatsby"],
   "plugins": [
     "babel-plugin-twin",
-    "babel-plugin-macros",
-    [
-      "babel-plugin-module-resolver",
-      {
-        "root": ["."],
-        "alias": {
-          "@roi/roi-comp-lib": "./packages/component-libraries/roi-comp-lib/src"
-        }
-      }
-    ]
+    "babel-plugin-macros"
+    // [
+    //   "babel-plugin-module-resolver",
+    //   {
+    //     "root": ["."],
+    //     "alias": {
+    //       "@roi/roi-comp-lib": "./packages/component-libraries/roi-comp-lib/src"
+    //     }
+    //   }
+    // ]
   ],
-  "babelrcRoots": [
-    ".",
-    "./themes/*",
-    "./component-libraries/*",
-    "./starters/*",
-    "./sites/*"
-  ],
+  // "babelrcRoots": [
+  //   ".",
+  //   "./themes/*",
+  //   "./component-libraries/*",
+  //   "./starters/*",
+  //   "./sites/*"
+  // ],
   "sourceMaps": true
 }

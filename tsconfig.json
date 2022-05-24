@@ -41,8 +41,8 @@
 
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
   },
-  "baseUrl": ".",
-  "paths": {
-    "@roi/roi-comp-lib/*": ["packages/component-libraries/roi-comp-lib/src/*"]
-  }
+  // "baseUrl": ".",
+  // "paths": {
+  //   "@roi/roi-comp-lib/*": ["packages/component-libraries/roi-comp-lib/src/*"]
+  // }
 }
