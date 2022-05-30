@@ -1,1 +1,1 @@
-// BLOCK EXPORTS
+export { PageHero } from "./PageHero"
