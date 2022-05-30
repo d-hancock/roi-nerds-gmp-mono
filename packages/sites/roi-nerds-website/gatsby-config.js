@@ -1,3 +1,5 @@
+const path = require("path")
+
 module.exports = {
   siteMetadata: {
     title: `roi-nerds-website`,
@@ -12,10 +14,13 @@ module.exports = {
     // If you want to use styled components you should add the plugin here.
     // 'gatsby-plugin-styled-components',
     // "gatsby-plugin-mui-emotion",
+    "gatsby-plugin-mui-emotion",
     {
-      resolve: require.resolve("../../plugins/gatsby-plugin-mui-emotion"),
+      resolve: "gatsby-plugin-resolve-src",
+      options: {
+        srcPath: path.resolve(""),
+      },
     },
-    "gatsby-plugin-resolve-src",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
