@@ -10,11 +10,9 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-top-layout",
-    // If you want to use styled components you should add the plugin here.
-    // 'gatsby-plugin-styled-components',
+    // Roi core theme
+    "@roi/gatsby-theme-roi-core",
     // "gatsby-plugin-mui-emotion",
-    "gatsby-plugin-mui-emotion",
     // {
     //   resolve: "gatsby-plugin-resolve-src",
     //   options: {

@@ -5310,6 +5310,7 @@ __metadata:
     "@mdx-js/react": v1
     "@mui/icons-material": ^5.2.4
     "@mui/material": ^5.2.4
+    "@roi/gatsby-theme-roi-core": "*"
     "@types/aos": ^3.0.4
     "@types/eslint": ^8.4.2
     "@types/eslint-plugin-prettier": ^3.1.0
