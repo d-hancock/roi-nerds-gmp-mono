@@ -123,6 +123,10 @@ const setActions = function (data, plop) {
           path: `${basePath}{{pascalCase name}}/index.js`,
           templateFile: "../../templates/blocks/js/component-js-index.template",
         },
+        {
+          path: `${basePath}{{pascalCase name}}/components/index.js`,
+          templateFile: "../../templates/blocks/js/empty-js-index.template",
+        },
         // {
         //   path: "../../../component-libraries/roi-comp-lib/src/blocks/index.js",
         //   pattern: /(\/\/ BLOCK EXPORTS)/g,
