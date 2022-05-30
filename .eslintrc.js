@@ -5,6 +5,7 @@ module.exports = {
     "**/.cache/**",
     "**/static/**",
     "**/content/**",
+    "**/generators/**",
   ],
   extends: [
     "plugin:import/recommended",

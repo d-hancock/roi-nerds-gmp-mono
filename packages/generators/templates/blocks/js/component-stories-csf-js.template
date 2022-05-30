@@ -1,0 +1,20 @@
+import React from 'react';
+import {{pascalCase name}} from "./{{pascalCase name}}";
+
+export default {
+    title: "Blocks/{{pascalCase name}}",
+    component: {{pascalCase name}},
+    description: "{{description}}",
+};
+
+
+// create a template of how args map to rendering
+const Template = (args) => <{{pascalCase name}} {...args} />;
+Template.args = {
+   
+};
+
+export const {{snakeCase name}} = Template.bind({});
+{{snakeCase name}}.args = {
+    ...Template.args,
+};

@@ -5162,6 +5162,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@roi/generators@*, @roi/generators@workspace:packages/generators":
+  version: 0.0.0-use.local
+  resolution: "@roi/generators@workspace:packages/generators"
+  dependencies:
+    change-case: ^4.1.2
+    flat: ^5.0.2
+    inquirer: ^8.2.4
+    inquirer-select-directory: ^1.2.0
+    plop: ^3.1.0
+    rxjs: ^7.5.5
+  languageName: unknown
+  linkType: soft
+
 "@roi/roi-comp-lib@*, @roi/roi-comp-lib@workspace:packages/component-libraries/roi-comp-lib":
   version: 0.0.0-use.local
   resolution: "@roi/roi-comp-lib@workspace:packages/component-libraries/roi-comp-lib"
@@ -5178,6 +5191,7 @@ __metadata:
     "@mui/icons-material": ^5.2.4
     "@mui/material": ^5.2.4
     "@roi/gatsby-theme-roi-core": "*"
+    "@roi/generators": "*"
     "@storybook/addon-actions": ^6.4.22
     "@storybook/addon-docs": ^6.4.22
     "@storybook/addon-essentials": ^6.4.22

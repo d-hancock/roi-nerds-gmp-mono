@@ -1,5 +1,7 @@
 # Close out Notes
+
 Take notes here about where you left off.
+plop not seeing generator. Want to get that running to prevent files from getting out of control.
 
 # Notes - Unfinished from previous work
 
@@ -46,6 +48,7 @@ Mostly just going to load all the work onto this package for the time being. I w
   - Process
   - Packages
   - Posts
+
 ### TODOs
 
 - Need to get all packages here using the same versions of the core technologies if possible. That should make it much easier to manage things going forward.

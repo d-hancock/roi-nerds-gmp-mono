@@ -15,7 +15,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "storybook": "start-storybook -p 6006 --ci",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "generate": "plop"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
@@ -56,6 +57,7 @@
     "@emotion/babel-preset-css-prop": "^11.2.0",
     "@etchteam/storybook-addon-status": "^4.2.1",
     "@mdx-js/react": "^1.6.22",
+    "@roi/generators": "*",
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-docs": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",

@@ -1,0 +1,11 @@
+import React from "react"
+import tw from "twin.macro"
+
+
+export const {{pascalCase name}} = (props) => {
+  return (
+    <div>My awesome component</div>
+  );
+};
+
+export default {{pascalCase name}}

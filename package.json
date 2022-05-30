@@ -12,14 +12,16 @@
     "clean:roi-site": "yarn workspace @roi/roi-nerds-website clean",
     "dev:comp-lib": "yarn workspace @roi/roi-comp-lib develop",
     "storybook:comp-lib": "yarn workspace @roi/roi-comp-lib storybook",
-    "clean:comp-lib": "yarn workspace @roi/roi-comp-lib clean"
+    "clean:comp-lib": "yarn workspace @roi/roi-comp-lib clean",
+    "gen:comp-lib": "yarn workspace @roi/roi-comp-lib generate"
   },
   "workspaces": [
     "packages/component-libraries/*",
     "packages/sites/*",
     "packages/starters/*",
     "packages/themes/*",
-    "packages/plugins/*"
+    "packages/plugins/*",
+    "packages/generators"
   ],
   "dependencies": {
     "gatsby": "^4.13.1",

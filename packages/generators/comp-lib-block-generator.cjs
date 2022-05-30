@@ -3,7 +3,7 @@ const dirSelect = require("inquirer-select-directory")
 
 const { unflatten } = require("flat")
 const { pascalCase, sentenceCase } = require("change-case")
-const { inputRequired, addWithCustomData } = require("../../utils/utils")
+const { inputRequired, addWithCustomData } = require("./utils/utils")
 
 /*
 MULTI PROMPT
@@ -18,7 +18,6 @@ Block Name
 
 */
 
-// Function for getting the basePath that will be used in plop
 const getGenPath = function (str, subString) {
   const regexPath = new RegExp(`.*\/(.*\/.*)(\/${subString}.*)`)
   const match = str.match(regexPath)
@@ -97,71 +96,66 @@ const setPrompts = async function () {
     addAnswerToAnswerObj(answers, answerObj)
   })
 
-  console.log(answerObj)
   return answerObj
 }
 
-const setActions = function (data, plop) {
-  // Parse data for easy templating
-  data = unflatten(data)
-  // console.log(`data:${data}`)
-  // console.log(data.dir)
-
-  const srcExp = "src/blocks"
-  const basePath = getGenPath(data.dir, srcExp)
-  // console.log(basePath)
-
-  const actions = []
-
-  ;[
-    {
-      condition: "component",
-      actions: [
-        {
-          path: `${basePath}{{pascalCase name}}/{{pascalCase name}}.js`,
-          templateFile:
-            "../../../../packages/generators/templates/blocks/js/component-js-index.template",
-        },
-        {
-          path: `${basePath}{{pascalCase name}}/index.js`,
-          templateFile: "../../../../packages/generators/templates/blocks/js/component-js-index.template",
-        },
-        {
-          path: `${basePath}index.js`,
-          pattern: /(\/\/ BLOCK EXPORTS)/g,
-          template:
-            "export { defualt as {{pascalCase name}} } from '{{pascalCase name}}/index.js';\n export * from './{{pascalCase name}}';\n\n$1",
-          type: "modify",
-        },
-      ],
-    },
-    {
-      condition: "stories",
-      actions: [
-        {
-          path: `${basePath}{{pascalCase name}}/{{pascalCase name}}.stories.js`,
-          templateFile:
-            "../../../../packages/generators/templates/blocks/js/component-stories-csf-js.template",
-        },
-      ],
-    },
-  ].forEach((a) => {
-    if (data.files.includes(a.condition)) {
-      a.actions.forEach((i) => {
-        actions.push(addWithCustomData(plop, i, data))
-      })
-    }
-  })
-  actions.push()
-  console.log(actions)
-  return actions
-}
-
 module.exports = (plop) => {
-  const generatorConfig = {
+  plop.addHelper("propsHelper", (text) => `{${text}}`)
+  plop.setGenerator("Roi Block Generator", {
     description: "Generates a block.",
     prompts: setPrompts,
-    actions: (data) => setActions(data, plop),
-  }
-  return generatorConfig
+    actions: (data) => {
+      // Parse data for easy templating
+      data = unflatten(data)
+      console.log(data)
+      console.log(data.dir)
+
+      const srcExp = "src/blocks"
+      const basePath = getGenPath(data.dir, srcExp)
+
+      const actions = []
+
+      ;[
+        {
+          condition: "component",
+          actions: [
+            {
+              path: `${basePath}{{pascalCase name}}/{{pascalCase name}}.js`,
+              templateFile: "templates/blocks/js/component-js.template",
+            },
+            {
+              path: `${basePath}{{pascalCase name}}/index.js`,
+              templateFile: "templates/blocks/js/component-js-index.template",
+            },
+            {
+              path: `${basePath}index.js`,
+              pattern: /(\/\/ BLOCK EXPORTS)/g,
+              template:
+                "export { defualt as {{pascalCase name}} } from '{{pascalCase name}}/index.js';\n export * from './{{pascalCase name}}';\n\n$1",
+              type: "modify",
+            },
+          ],
+        },
+        {
+          condition: "stories",
+          actions: [
+            {
+              path: `${basePath}{{pascalCase name}}/{{pascalCase name}}.stories.js`,
+              templateFile:
+                "templates/blocks/js/component-stories-csf-js.template",
+            },
+          ],
+        },
+      ].forEach((a) => {
+        if (data.files.includes(a.condition)) {
+          a.actions.forEach((i) => {
+            actions.push(addWithCustomData(plop, i, data))
+          })
+        }
+      })
+      actions.push()
+
+      return actions
+    },
+  })
 }

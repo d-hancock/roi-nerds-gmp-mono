@@ -4,7 +4,8 @@
     "**/node_modules",
     "**/.cache/*",
     "**/public",
-    "**/cypress"
+    "**/cypress",
+    "**/generators/**"
   ],
   "include": ["./packages", "**/gatsby/**/*", "**/src/**/*", "**/index.ts"],
   "compilerOptions": {
@@ -40,7 +41,7 @@
     "noEmit": true
 
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
-  },
+  }
   // "baseUrl": ".",
   // "paths": {
   //   "@roi/roi-comp-lib/*": ["packages/component-libraries/roi-comp-lib/src/*"]
