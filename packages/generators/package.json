@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "type": "commonjs",
   "devDependencies": {
+    "@types/flat": "^5.0.2",
+    "@types/inquirer": "^8.2.1",
     "change-case": "^4.1.2",
     "flat": "^5.0.2",
     "inquirer": "^8.2.4",

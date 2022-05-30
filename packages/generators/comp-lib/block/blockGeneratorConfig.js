@@ -18,7 +18,7 @@ Block Name
 
 */
 
-// Function for getting the basePath that will be used in plop
+// Function for getting the basePath that will be used in plop. Includeds a trailing slash.
 const getGenPath = function (str, subString) {
   const regexPath = new RegExp(`.*\/(.*\/.*)(\/${subString}.*)`)
   const match = str.match(regexPath)
@@ -97,19 +97,17 @@ const setPrompts = async function () {
     addAnswerToAnswerObj(answers, answerObj)
   })
 
-  console.log(answerObj)
+  console.log("answerObj", answerObj)
   return answerObj
 }
 
 const setActions = function (data, plop) {
   // Parse data for easy templating
   data = unflatten(data)
-  // console.log(`data:${data}`)
-  // console.log(data.dir)
 
   const srcExp = "src/blocks"
   const basePath = getGenPath(data.dir, srcExp)
-  // console.log(basePath)
+  console.log(basePath)
 
   const actions = []
 
@@ -119,20 +117,19 @@ const setActions = function (data, plop) {
       actions: [
         {
           path: `${basePath}{{pascalCase name}}/{{pascalCase name}}.js`,
-          templateFile:
-            "../../../../packages/generators/templates/blocks/js/component-js-index.template",
+          templateFile: "../../templates/blocks/js/component-js.template",
         },
         {
           path: `${basePath}{{pascalCase name}}/index.js`,
-          templateFile: "../../../../packages/generators/templates/blocks/js/component-js-index.template",
+          templateFile: "../../templates/blocks/js/component-js-index.template",
         },
-        {
-          path: `${basePath}index.js`,
-          pattern: /(\/\/ BLOCK EXPORTS)/g,
-          template:
-            "export { defualt as {{pascalCase name}} } from '{{pascalCase name}}/index.js';\n export * from './{{pascalCase name}}';\n\n$1",
-          type: "modify",
-        },
+        // {
+        //   path: "../../../component-libraries/roi-comp-lib/src/blocks/index.js",
+        //   pattern: /(\/\/ BLOCK EXPORTS)/g,
+        //   template:
+        //     "export { defualt as {{pascalCase name}} } from '{{pascalCase name}}/index.js';\n export * from './{{pascalCase name}}';\n\n$1",
+        //   type: "modify",
+        // },
       ],
     },
     {
@@ -141,7 +138,7 @@ const setActions = function (data, plop) {
         {
           path: `${basePath}{{pascalCase name}}/{{pascalCase name}}.stories.js`,
           templateFile:
-            "../../../../packages/generators/templates/blocks/js/component-stories-csf-js.template",
+            "../../templates/blocks/js/component-stories-csf-js.template",
         },
       ],
     },
@@ -153,7 +150,6 @@ const setActions = function (data, plop) {
     }
   })
   actions.push()
-  console.log(actions)
   return actions
 }
 

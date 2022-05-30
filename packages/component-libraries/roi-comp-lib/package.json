@@ -16,7 +16,7 @@
     "clean": "gatsby clean",
     "storybook": "start-storybook -p 6006 --ci",
     "build-storybook": "build-storybook",
-    "generate": "plop"
+    "generate": "plop --plopfile ../../generators/comp-lib-generator.cjs"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
