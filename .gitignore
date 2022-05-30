@@ -7,4 +7,5 @@
 !.yarn/versions
 node_modules/
 .idea
-**/.cache/**
+packages/**/.cache/**
+packages/**/public/**
