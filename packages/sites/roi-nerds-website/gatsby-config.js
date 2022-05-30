@@ -15,12 +15,12 @@ module.exports = {
     // 'gatsby-plugin-styled-components',
     // "gatsby-plugin-mui-emotion",
     "gatsby-plugin-mui-emotion",
-    {
-      resolve: "gatsby-plugin-resolve-src",
-      options: {
-        srcPath: path.resolve(""),
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-resolve-src",
+    //   options: {
+    //     srcPath: path.resolve(""),
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
