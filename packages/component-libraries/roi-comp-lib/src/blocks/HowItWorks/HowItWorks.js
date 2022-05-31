@@ -1,5 +1,11 @@
 import React from "react"
 import tw from "twin.macro"
+import {
+  AnnotationIcon,
+  GlobeAltIcon,
+  LightningBoltIcon,
+  ScaleIcon,
+} from "@heroicons/react/outline"
 
 const features = [
   {
