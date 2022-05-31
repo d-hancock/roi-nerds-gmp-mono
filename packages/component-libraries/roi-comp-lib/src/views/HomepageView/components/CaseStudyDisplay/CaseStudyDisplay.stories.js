@@ -2,7 +2,7 @@ import React from 'react';
 import CaseStudyDisplay from "./CaseStudyDisplay";
 
 export default {
-    title: "Blocks/CaseStudyDisplay",
+    title: "Views/HomepageView/Components/CaseStudyDisplay",
     component: CaseStudyDisplay,
     description: "Case study display block.",
 };

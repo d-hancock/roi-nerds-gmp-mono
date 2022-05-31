@@ -2,7 +2,7 @@ import React from 'react';
 import TimelineSection from "./TimelineSection";
 
 export default {
-    title: "Blocks/TimelineSection",
+    title: "Views/HomepageView/Components/TimelineSection",
     component: TimelineSection,
     description: "Timeline section block.",
 };

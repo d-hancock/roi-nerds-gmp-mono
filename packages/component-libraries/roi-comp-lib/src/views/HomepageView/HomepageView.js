@@ -1,10 +1,7 @@
-import React from 'react'
+import React from "react"
 
-
-const HomepageView = () => {
-  return (
-    <div>HomepageView</div>
-  )
+export const HomepageView = () => {
+  return <div>HomepageView</div>
 }
 
 export default HomepageView

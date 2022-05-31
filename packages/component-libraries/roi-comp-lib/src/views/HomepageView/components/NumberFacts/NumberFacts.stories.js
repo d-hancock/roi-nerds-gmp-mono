@@ -2,7 +2,7 @@ import React from 'react';
 import NumberFacts from "./NumberFacts";
 
 export default {
-    title: "Blocks/NumberFacts",
+    title: "Views/HomepageView/Components/NumberFacts",
     component: NumberFacts,
     description: "Number facts block.",
 };

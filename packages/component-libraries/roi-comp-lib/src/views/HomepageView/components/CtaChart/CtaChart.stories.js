@@ -2,7 +2,7 @@ import React from 'react';
 import CtaChart from "./CtaChart";
 
 export default {
-    title: "Blocks/CtaChart",
+    title: "Views/HomepageView/Components/CtaChart",
     component: CtaChart,
     description: "Cta chart block.",
 };

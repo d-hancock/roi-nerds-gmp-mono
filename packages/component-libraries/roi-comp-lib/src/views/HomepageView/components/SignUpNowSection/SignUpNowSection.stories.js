@@ -2,7 +2,7 @@ import React from 'react';
 import SignUpNowSection from "./SignUpNowSection";
 
 export default {
-    title: "Blocks/SignUpNowSection",
+    title: "Views/HomepageView/Components/SignUpNowSection",
     component: SignUpNowSection,
     description: "Sign up now section block.",
 };

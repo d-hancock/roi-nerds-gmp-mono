@@ -2,7 +2,7 @@ import React from 'react';
 import HowItWorks from "./HowItWorks";
 
 export default {
-    title: "Blocks/HowItWorks",
+    title: "Views/HomepageView/Components/HowItWorks",
     component: HowItWorks,
     description: "How it works block.",
 };

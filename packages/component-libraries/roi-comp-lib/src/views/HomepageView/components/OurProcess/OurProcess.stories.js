@@ -2,7 +2,7 @@ import React from 'react';
 import OurProcess from "./OurProcess";
 
 export default {
-    title: "Blocks/OurProcess",
+    title: "Views/HomepageView/Components/OurProcess",
     component: OurProcess,
     description: "Our process block.",
 };

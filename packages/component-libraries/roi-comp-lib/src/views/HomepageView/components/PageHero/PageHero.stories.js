@@ -2,7 +2,7 @@ import React from "react"
 import PageHero from "./PageHero"
 
 export default {
-  title: "Blocks/PageHero",
+  title: "Views/HomepageView/Components/PageHero",
   component: PageHero,
   description: "Page hero block.",
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import FaqSection from "./FaqSection";
 
 export default {
-    title: "Blocks/FaqSection",
+    title: "Views/HomepageView/Components/FaqSection",
     component: FaqSection,
     description: "Faq section block.",
 };
