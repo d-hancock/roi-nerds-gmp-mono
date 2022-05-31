@@ -3,7 +3,13 @@ const dirSelect = require("inquirer-select-directory")
 
 const { unflatten } = require("flat")
 const { pascalCase, sentenceCase } = require("change-case")
-const { inputRequired, addWithCustomData } = require("../../utils/utils")
+const {
+  inputRequired,
+  addWithCustomData,
+  getGenPath,
+  getFileActionsFromConditions,
+  componentConditionalFileActions,
+} = require("../../utils/utils")
 
 /*
 MULTI PROMPT
@@ -14,16 +20,12 @@ function along with function calls to generate the next prompt.
 
 /* 
 Prompt questions
-Block Name
+Block Name?
+Which directory to generate files in?
+Which files to generate?
+Block Description?
 
 */
-
-// Function for getting the basePath that will be used in plop. Includeds a trailing slash.
-const getGenPath = function (str, subString) {
-  const regexPath = new RegExp(`.*\/(.*\/.*)(\/${subString}.*)`)
-  const match = str.match(regexPath)
-  return `../${match[1]}${match[2]}/`
-}
 
 const addAnswerToAnswerObj = function (answers, ansObj) {
   Object.entries(answers).forEach(([key, value]) => {
@@ -97,7 +99,7 @@ const setPrompts = async function () {
     addAnswerToAnswerObj(answers, answerObj)
   })
 
-  console.log("answerObj", answerObj)
+  // console.log("answerObj", answerObj)
   return answerObj
 }
 
@@ -107,11 +109,22 @@ const setActions = function (data, plop) {
 
   const srcExp = "src/blocks"
   const basePath = getGenPath(data.dir, srcExp)
-  console.log(basePath)
+  // console.log(basePath)
 
   const actions = []
 
-  ;[
+  const getFileActionsFromConditions = (fileActionsByCondition) => {
+    fileActionsByCondition.forEach((a) => {
+      if (data.files.includes(a.condition)) {
+        a.actions.forEach((i) => {
+          actions.push(addWithCustomData(plop, i, data))
+        })
+      }
+    })
+  }
+
+
+  const conditionalFileActions = [
     {
       condition: "component",
       actions: [
@@ -146,13 +159,11 @@ const setActions = function (data, plop) {
         },
       ],
     },
-  ].forEach((a) => {
-    if (data.files.includes(a.condition)) {
-      a.actions.forEach((i) => {
-        actions.push(addWithCustomData(plop, i, data))
-      })
-    }
-  })
+  ]
+
+  getFileActionsFromConditions(conditionalFileActions)
+  // getFileActionsFromConditions(conditionalFileActions, plop, data)
+
   actions.push()
   return actions
 }
