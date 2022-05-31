@@ -1,0 +1,3 @@
+It may be worth exploring the use of layout primitives as described in [every-layout](https://every-layout.dev/rudiments/composition/).
+
+There is a package called [Bedrock-layouts](https://github.com/Bedrock-Layouts/Bedrock) with fantastic [documentation](https://www.bedrock-layout.dev/?path=/docs/overview-bedrock-layout-primitives--page) that implements this layout primitives system in react. However it is implemented using styled components and an opinionated themeing system. Adding another styling solution isn't tenable. Its possible that I might reimplement the primitives that I might use regularly, or something similar, in emotion.
