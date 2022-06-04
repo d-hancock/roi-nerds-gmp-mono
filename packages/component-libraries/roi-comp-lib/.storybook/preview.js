@@ -1,6 +1,7 @@
 import { action } from "@storybook/addon-actions"
 import { MINIMAL_VIEWPORTS, INITIAL_VIEWPORTS } from "@storybook/addon-viewport"
 import { themeDecorator } from "./sbDecorators"
+import "@fontsource/inter/variable-full.css"
 
 // --- Parameters ---
 // Parameters for Backgrounds
@@ -31,6 +32,25 @@ const viewport = {
     ...MINIMAL_VIEWPORTS,
     ...INITIAL_VIEWPORTS,
   },
+}
+
+export const globalTypes = {
+  themeMode: {
+    name: "Theme Mode",
+    description: "Global Theme Mode Selection",
+    defualtValue: "light",
+    toolbar: {
+      icon: "circlehollow",
+      items: ["light", "dark"],
+      showName: true,
+      dynamicTitle: true,
+    },
+  },
+  // themeConfig: {
+  //   name: "Theme Config",
+  //   description: "Global Theme Config"
+  //   defualtValue: 
+  // }
 }
 
 export const parameters = {

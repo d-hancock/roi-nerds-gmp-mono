@@ -1,23 +1,29 @@
 import React from "react"
-import { GlobalStyles } from "twin.macro"
+import { GlobalStyles, theme } from "twin.macro"
 import {
   ThemeProvider,
+  responsiveFontSizes,
   createTheme,
   StyledEngineProvider,
   CssBaseline,
 } from "@mui/material"
+import { roiTheme } from "../src/theme/roiTheme"
 
-const defaultTheme = createTheme()
+const defaultTheme = responsiveFontSizes(createTheme())
 
-export const themeDecorator = (story) => (
-  <StyledEngineProvider injectFirst>
-    <ThemeProvider theme={defaultTheme}>
-      <CssBaseline />
-      <GlobalStyles />
-      {story()}
-    </ThemeProvider>
-  </StyledEngineProvider>
-)
+export const themeDecorator = (story, context) => {
+  const themeMode = context.globals.themeMode
+  const theme = roiTheme(themeMode)
+  return (
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <GlobalStyles />
+        {story()}
+      </ThemeProvider>
+    </StyledEngineProvider>
+  )
+}
 
 export const withMargin = (Story, context) => (
   <div style={{ margin: "3em" }}>
