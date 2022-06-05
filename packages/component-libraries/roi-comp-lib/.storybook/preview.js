@@ -42,7 +42,7 @@ export const globalTypes = {
     toolbar: {
       icon: "circlehollow",
       items: ["light", "dark"],
-      showName: true,
+      showName: false,
       dynamicTitle: true,
     },
   },

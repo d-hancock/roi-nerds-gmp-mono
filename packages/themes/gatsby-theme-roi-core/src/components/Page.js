@@ -4,7 +4,8 @@ import { ThemeProvider } from "@mui/material/styles"
 import Paper from "@mui/material/Paper"
 import CssBaseline from "@mui/material/CssBaseline"
 import { GlobalStyles } from "twin.macro"
-import getTheme from "../../src/theme"
+// import getTheme from "../../src/theme"
+import { roiTheme } from "@roi/roi-comp-lib/src/theme"
 import AOS from "aos"
 
 export const useDarkMode = () => {
@@ -63,7 +64,9 @@ export default function Page({ children }) {
   }, [mountedComponent, themeMode])
 
   return (
-    <ThemeProvider theme={getTheme(themeMode, themeToggler)}>
+    <ThemeProvider theme={roiTheme(themeMode, themeToggler)}>
+
+    {/* <ThemeProvider theme={getTheme(themeMode, themeToggler)}> */}
       {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
       {/* <CssBaseline /> */}
       {/* GlobalStyles added from twin.macro to enable styles from tailwind. */}

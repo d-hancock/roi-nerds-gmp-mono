@@ -1,18 +1,19 @@
-import { responsiveFontSizes } from '@mui/material';
-import { createTheme } from '@mui/material/styles';
-import shadows from './shadows';
-import { light, dark } from './palette';
+import { responsiveFontSizes } from "@mui/material"
+import { createTheme } from "@mui/material/styles"
+import shadows from "./shadows"
+import { light, dark } from "./palette"
 
+// TODO: Need to implement theme from component library, or an interface between the two.
 const getTheme = (mode, themeToggler) =>
   responsiveFontSizes(
     createTheme({
-      palette: mode === 'light' ? light : dark,
+      palette: mode === "light" ? light : dark,
       shadows: shadows(mode),
       typography: {
         fontFamily: '"Inter", sans-serif',
         button: {
-          textTransform: 'none',
-          fontWeight: 'medium',
+          textTransform: "none",
+          fontWeight: "medium",
         },
       },
       zIndex: {
@@ -28,7 +29,7 @@ const getTheme = (mode, themeToggler) =>
               paddingTop: 10,
               paddingBottom: 10,
             },
-            containedSecondary: mode === 'light' ? { color: 'white' } : {},
+            containedSecondary: mode === "light" ? { color: "white" } : {},
           },
         },
         MuiInputBase: {
@@ -57,7 +58,7 @@ const getTheme = (mode, themeToggler) =>
         },
       },
       themeToggler,
-    }),
-  );
+    })
+  )
 
-export default getTheme;
+export default getTheme
