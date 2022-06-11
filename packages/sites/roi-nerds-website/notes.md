@@ -13,22 +13,12 @@ Depending on results I'll just leave it, if it looks like ass then I'll start th
 5. Create components and themes from this site.
 6. Turn it into a starter that I can use to quickly get other sites up and running.  
 
-## Shared Components
-
-### Appbar
-    Get the nav setup for the actual core pages I'll be using for the MVP. 
-### Footer
-    Setup nav for the footer.
-
-# Static Pages
-
-## Homepage
-
-## Services Page
-
-## About Page
-
-# Dynamic Pages
-
-## Service Pages
-## Case Study Pages
+# Features
+## MVP
+- non embarassing design
+- non embarassing copy
+- ability to field leads
+## Essential
+- analytics
+- client portal
+- 

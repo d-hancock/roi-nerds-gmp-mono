@@ -1,20 +1,20 @@
-import React from 'react';
-import CaseStudyDisplay from "./CaseStudyDisplay";
+// import React from 'react';
+// import CaseStudyDisplay from "./CaseStudyDisplay";
 
-export default {
-    title: "Views/HomepageView/Components/CaseStudyDisplay",
-    component: CaseStudyDisplay,
-    description: "Case study display block.",
-};
+// export default {
+//     title: "Views/HomepageView/Components/CaseStudyDisplay",
+//     component: CaseStudyDisplay,
+//     description: "Case study display block.",
+// };
 
 
-// create a template of how args map to rendering
-const Template = (args) => <CaseStudyDisplay {...args} />;
-Template.args = {
+// // create a template of how args map to rendering
+// const Template = (args) => <CaseStudyDisplay {...args} />;
+// Template.args = {
    
-};
+// };
 
-export const case_study_display = Template.bind({});
-case_study_display.args = {
-    ...Template.args,
-};
+// export const case_study_display = Template.bind({});
+// case_study_display.args = {
+//     ...Template.args,
+// };
