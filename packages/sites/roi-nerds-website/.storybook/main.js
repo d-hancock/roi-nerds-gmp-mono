@@ -40,7 +40,6 @@ module.exports = {
     }
     return config
   },
-
 }
 // Fix for package resolution
 function getPackageDir(filepath) {

@@ -11,4 +11,7 @@ export default {
 const Template = (args) => <ServiceCard {...args} />
 
 export const Defualt = Template.bind({})
-Defualt.args = {}
+Defualt.args = {
+  title: "Strategic",
+  subtitle: "I'm a subtitle",
+}
