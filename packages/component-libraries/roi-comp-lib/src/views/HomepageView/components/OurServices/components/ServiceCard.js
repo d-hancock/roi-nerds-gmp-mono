@@ -12,7 +12,7 @@ const ServiceCard = () => {
   return (
     <Card>
       <CardContent>
-        <h3 tw="text-green">I am the Header</h3>
+        <h3 tw="text-g">I am the Header</h3>
         <Typography>I'm a quick blerb about the type of service</Typography>
       </CardContent>
     </Card>
